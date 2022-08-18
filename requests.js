@@ -18,17 +18,22 @@ function fetchData(response){
         // console.log(product.articles);
         const headLines = Array.from(product.articles);
         console.log(headLines)
-        headLines.length = 5;
-        console.log(headLines);
-        const length = headLines.length;
-        headLines.forEach() {
-        
-        }
-           
-        }
         handleResult();
         // return headLines;
-        
+        for(let i = 0 ; i < headLines.length; i++) {
+            const headlineDiv = document.createElement('div');
+            headlineDiv.classList.add('headline');
+            headlineDiv.innerHTML = `
+                <div>
+                <h1 class="BBC-headlines">
+                <h2 class="headline">${headLines[i].title}</h2>
+                </h1>
+                </div>
+            
+            `
+            const target = document.getElementById('target');
+            document.getElementById('target').appendChild(headlineDiv);
+        }
         
         // console.log(fetchData.responseTEXT);
         // handleResult(response);
@@ -54,7 +59,8 @@ function handleResult (response) {
     // console.log(Array.from(response));
     
     
-    
+    const headlineDiv = document.createElement('div');
+    headlineDiv.classList.add('headline');
     // document.getElementById('target').appendChild('headlineDiv');
     
 };
