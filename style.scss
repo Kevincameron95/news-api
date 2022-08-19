@@ -47,7 +47,8 @@ box-sizing: border-box;
     display: grid;
     grid-template-columns: 80vw 20vw;
     grid-template-rows: 33.3% 33.3% 33.3%;
-    background-color: red;
+    background: rgb(255,0,0);
+    
 }
 
 .newsworld{
@@ -60,6 +61,7 @@ box-sizing: border-box;
         text-align: center;
         align-self: center;
         font-family: 'Abril Fatface', cursive;
+        text-shadow: 1px 3px 3px #777;
         // justify-self: center;
     }
 
@@ -78,7 +80,7 @@ box-sizing: border-box;
     }
 }
 .button-menu{
-    background-color: red;
+    background-color: rgba(222, 206, 206, 0);
     border: none;
 }
 

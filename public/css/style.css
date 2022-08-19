@@ -46,7 +46,7 @@ body {
       grid-template-columns: 80vw 20vw;
   -ms-grid-rows: 33.3% 33.3% 33.3%;
       grid-template-rows: 33.3% 33.3% 33.3%;
-  background-color: red;
+  background: red;
 }
 
 .newsworld-h1 {
@@ -60,6 +60,7 @@ body {
       -ms-grid-row-align: center;
       align-self: center;
   font-family: 'Abril Fatface', cursive;
+  text-shadow: 1px 3px 3px #777;
 }
 
 .newsworld-menu-icon {
@@ -81,7 +82,7 @@ body {
 }
 
 .button-menu {
-  background-color: red;
+  background-color: rgba(222, 206, 206, 0);
   border: none;
 }
 
