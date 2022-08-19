@@ -17,10 +17,11 @@ function topStories(response){
             const topStorieDiv = document.createElement('div');
             topStorieDiv.classList.add('topstories');
             topStorieDiv.innerHTML = `
-                <div class="top-stories">
+                <div class="top-stories carousel-item">
                     <h2 id="top-stories-headline">${topStoriesArray[i+1].title}</h2>
-                        <h5 class="top-stories-author">${topStoriesArray[i].author}</h5>
-                        <h6 class="top-stories-date"></h6>
+                    <h6 class="top-stories-date"></h6>
+                    <img src="${topStoriesArray[i+1].urlToImage}" class="article-img"></img>
+                    <h5 class="top-stories-author">${topStoriesArray[i+1].author}</h5>
                         <p class="top-stories-description">${topStoriesArray[i].description}</p>
                 </div>
             

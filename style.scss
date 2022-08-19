@@ -101,8 +101,8 @@ box-sizing: border-box;
 }
 
 #top-headline-div{
-    
-    font-size: 1.7rem;
+    margin: 2rem;
+    font-size: 2rem;
     text-align: center;
     
     text-transform: uppercase;
@@ -127,6 +127,7 @@ box-sizing: border-box;
 }
 
 .top-headline-summary-p{
+    margin-top: 10%;
     font-size: 1rem;
     font-weight: 100;
     font-family: 'Roboto Slab', serif;
@@ -142,8 +143,15 @@ main{
     grid-column-end: 5;
 }
 
-.top-stories{
-    border-bottom: 5 px solid black;
+.main-top-stories-h2{
+    text-align: center;
+    font-size: 1.4rem;
+    background-color: red;
+    color: white;
+}
+
+.topstories{
+// display: flex;
 
     
 }
@@ -152,25 +160,33 @@ main{
     color:black;
     text-transform: capitalize;
     font-size: 1.7rem;
-    text-align: center;
+    text-align: justify;
     font-family: 'Roboto Slab', serif;
     font-weight: 700;
     margin: auto;
-    margin:1rem;
+    margin:2rem;
 }
 
 .top-stories-author{
     color:red;
     font-family: 'Aboreto', cursive;
-    font-size: .8rem;
+    font-size: 1rem;
     text-align: center;
+    margin-top: 3rem;
     
 }
 .top-stories-description{
     color: black;
     font-family: 'Crimson Text', serif;
     font-size: 1.3rem;
+    text-align: justify;
     border-bottom: 1px solid black;
-    margin: 2rem;
+    margin: 3rem;
     margin-bottom: 3rem;
+}
+
+.article-img{
+    margin: auto;
+    display: block;
+    width: 98%;
 }
