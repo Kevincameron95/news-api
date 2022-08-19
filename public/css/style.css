@@ -202,8 +202,8 @@ main {
     -ms-grid-column: 1;
         grid-column-start: 1;
     grid-column-end: 3;
-    -ms-grid-row: 3;
-        grid-row-start: 3;
+    -ms-grid-row: 4;
+        grid-row-start: 4;
     grid-row-end: 6;
   }
   .headline-h2 {
@@ -318,7 +318,6 @@ main {
     -ms-grid-column: 1;
         grid-column-start: 1;
     grid-column-end: 5;
-    background-color: lightcoral;
     background-image: url(/images/wolrd-9-1187862.jpg);
     background-size: cover;
     background-blend-mode: darken;

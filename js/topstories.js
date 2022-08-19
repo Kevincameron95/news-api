@@ -10,7 +10,7 @@ function topStories(response){
         // console.log(product.articles);
         const topStoriesArray = Array.from(product.articles);
         // console.log(topStoriesArray);
-        topStoriesArray.length = 5;
+        topStoriesArray.length = 20;
         
         // console.log(topStoriesArray);
         // return topStoriesArray;
