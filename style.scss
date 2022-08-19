@@ -77,6 +77,10 @@ box-sizing: border-box;
         background-color: red;
     }
 }
+.button-menu{
+    background-color: red;
+    border: none;
+}
 
 .main{
     grid-row-start: 4;
@@ -134,6 +138,7 @@ box-sizing: border-box;
     grid-row-start: 3;
     grid-row-end: 6;
     background-color: rgba(228, 228, 228,.2);
+    text-shadow: 1px 1px 1px rgba(255, 255, 255,.6);
 }
 
 .headline-h2{
@@ -182,8 +187,46 @@ main{
 
 
 // Utility Classes
-@media screen and (max-width:1000px){
+@media screen and (max-width:460px){
     .newsworld-header-nav{
+        display: none;
+    }
+    .headline{
+        width: 100%;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 6;
+        
+        
+        &-h2{
+            font-size: 1.5rem;
+        }
+    }
+
+    .top-headline-summary-p{
+        display: none;
+        
+    }
+}
+@media screen and (min-width:460px) and (max-width:1000px){
+    .newsworld-header-nav{
+        display: none;
+    }
+    .headline{
+        width: 100%;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 4;
+        grid-row-end: 6;
+        
+        
+        &-h2{
+            font-size: 2rem;
+        }
+    }
+
+    .top-headline-summary-p{
         display: none;
     }
 }
@@ -288,5 +331,17 @@ main{
     background-image: url(/images/wolrd-9-1187862.jpg);
     background-size: cover;
     background-blend-mode:darken;
-}
+    }
+
+    .headline{
+        width: 100%;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 4;
+        grid-row-end: 6;
+        
+        &-h2{
+            font-size: 2.7rem;
+        }
+    }
 }
