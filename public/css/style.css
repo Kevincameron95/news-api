@@ -131,6 +131,10 @@ body {
   font-family: 'Roboto Slab', serif;
 }
 
+.top-headline-image {
+  display: none;
+}
+
 .top-headline-summary-p {
   margin-top: 10%;
   font-size: 1rem;

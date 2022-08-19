@@ -19,8 +19,8 @@ function topHeadline(response){
                 <div id="top-headline-div">
                 
                 <h2 class="headline"><a id="top-headline-link" href="${topHeadlines[0]}.url">${topHeadlines[0].title}</a></h2>
+                <img src="${topHeadlines[0].urlToImage}" class="top-headline-image"></img>
                 <p class="top-headline-summary-p">by:${topHeadlines[0].author}</p>
-                
                 </div>
             
             `

@@ -126,6 +126,9 @@ box-sizing: border-box;
     color: white;
     font-family: 'Roboto Slab', serif;
 }
+.top-headline-image{
+    display: none;
+}
 
 .top-headline-summary-p{
     margin-top: 10%;
@@ -190,6 +193,7 @@ main{
 }
 
 .article-img{
+
     margin: auto;
     display: block;
     width: 98%;
