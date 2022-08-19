@@ -18,10 +18,10 @@ function topStories(response){
         
         for(let i = 0 ; i < topStoriesArray.length; i++) {
           const dateSlice = topStoriesArray[i].publishedAt.slice( 0,10 )
-          const urlSlice = topStoriesArray[0].urlToImage.slice(0, length)
+          // const urlSlice = topStoriesArray[0].urlToImage.slice(0, length)
           const topStorieDiv = document.createElement('div');
           const nullFinder = '${topStoriesArray[i].description}';
-          const backGroundImgTopStories = document.querySelector('.carousel-item');
+          // const backGroundImgTopStories = document.querySelector('.carousel-item');
           
           
           
@@ -29,7 +29,7 @@ function topStories(response){
             
 
             
-            noDescription(nullFinder,null);
+            // noDescription(nullFinder,null);
             // console.log(noDescription);
             topStorieDiv.classList.add('topstories');
             topStorieDiv.innerHTML = `
@@ -46,8 +46,8 @@ function topStories(response){
             document.getElementById('topstories-top-target').appendChild(topStorieDiv);
             
      }
-     const topStorieDiv = document.querySelector('.topstories');
-     console.log(topStorieDiv.style.backgroundImage = `url('${topStoriesArray[1].urlToImage}')`);
+    //  const topStorieDiv = document.querySelector('.topstories');
+    //  console.log(topStorieDiv.style.backgroundImage = `url('${topStoriesArray[1].urlToImage}')`);
      
      
         // console.log(fetchData.responseTEXT);

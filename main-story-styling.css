@@ -119,6 +119,23 @@
 
 @media screen and (min-width:1000px) {
 
+    .top-stories-description{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 4;
+        color: rgb(0, 0, 0);
+        font-family: 'Crimson Text', serif;
+        font-size: 1.2rem;
+        text-align: left;
+        /* border-bottom: 1px solid black; */
+        margin-left: 2rem;
+        margin-right: 2rem;
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+        position: relative;
+        
+    }
 
 
 
