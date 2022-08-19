@@ -34,7 +34,7 @@ box-sizing: border-box;
 .main-site-grid{
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 5rem 30vh 7vh 50vh 5vh;
+    grid-template-rows: 5rem 25vh 7vh 50vh 5vh;
 }
 
 #header-grid{
@@ -84,10 +84,10 @@ box-sizing: border-box;
 }
 
 .headline{
-    grid-row-start: 3;
-    grid-row-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 5;
     grid-column-start: 1;
-    grid-column-end: 5;
+    grid-column-end: 3;
     width: 100%;
     height: 100%;
     
@@ -113,12 +113,19 @@ box-sizing: border-box;
 #headline-top-target{
     grid-row-start: 2;
     grid-row-end: 4;
+    height: 100%;
+    width: 100%;
     grid-column-start: 1;
     grid-column-end: 5;
-    background-color: lightcoral;
+    // background-color: lightcoral;
     background-image: url(/images/wolrd-9-1187862.jpg);
-    background-size: contain;
+    background-size: cover;
+    
+    background-repeat: no-repeat;
     background-blend-mode:darken;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
 }
 
 #top-headline-link{
@@ -131,7 +138,7 @@ box-sizing: border-box;
 }
 
 .top-headline-summary-p{
-    margin-top: 10%;
+    grid-row-start: 5;
     font-size: 1rem;
     font-weight: 100;
     font-family: 'Roboto Slab', serif;
@@ -199,6 +206,14 @@ main{
     width: 98%;
 }
 
+// Utility Classes
+@media screen and (max-width:1000px){
+    .newsworld-header-nav{
+        display: none;
+    }
+}
+
+
 @media screen and (min-width:1000px) {
     #header-grid{
         grid-column-start:1;
@@ -230,10 +245,47 @@ main{
 
 
     .newsworld-header-nav{
-        // display: flex;
+        width: 100%;
+        height: 100%;
         grid-row-start:4 ;
+        grid-row-end: 4;
         grid-column-start: 1;
-        grid-column-end: 4;
+        grid-column-end: 6;
+        background-color: silver;
+        color: white;
+
+    }
+
+    .desktop-nav-grid{
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+    }
+
+    .nav-ul{
+        width: 70%;
+        height: 100%;
+        margin-left: auto;
+        
+        
+    }
+
+    .li-nav{
+        list-style: none;
+        font-size: 1.3rem;
+        margin-left: 5%;
+        display: inline-flex;
+        
+        
+    }
+    #search-bar{
+        grid-column-start: 5;
+    }
+    .newsworld-h1{
+        font-size: 5rem;
+        grid-row-start: 1;
+        margin-top: 2rem;
     }
 
     #topstories-top-target{

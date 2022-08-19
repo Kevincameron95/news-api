@@ -9,10 +9,10 @@ function topStories(response){
         const product = response.data
         // console.log(product.articles);
         const topStoriesArray = Array.from(product.articles);
-        console.log(topStoriesArray);
+        // console.log(topStoriesArray);
         
         topStoriesArray.length = 5;
-        console.log(topStoriesArray);
+        // console.log(topStoriesArray);
         // return topStoriesArray;
         for(let i = 0 ; i < topStoriesArray.length; i++) {
             const dateSlice = topStoriesArray[i].publishedAt.slice( 0,10 )
@@ -23,7 +23,7 @@ function topStories(response){
 
             
             noDescription(nullFinder,null);
-            console.log(noDescription);
+            // console.log(noDescription);
             topStorieDiv.classList.add('topstories');
             topStorieDiv.innerHTML = `
                 <div class="top-stories carousel-item">
