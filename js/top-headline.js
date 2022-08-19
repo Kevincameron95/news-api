@@ -24,9 +24,9 @@ function topHeadline(response){
             headlineDiv.innerHTML = `
                 <div id="top-headline-div">
                 
-                <h2 class="headline"><a id="top-headline-link" href="${topHeadlines[0]}.url">${topHeadlines[0].title}</a></h2>
                 
-                <p class="top-headline-summary-p">by:${topHeadlines[0].author}</p>
+                <h2 class="headline-h2"><a id="top-headline-link" href="${topHeadlines[0]}.url">${topHeadlines[0].title}</a></h2>
+                <p class="top-headline-summary-p">by:${topHeadlines[0].description}</p>
                 </div>
             
             `
