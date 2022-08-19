@@ -73,6 +73,7 @@ body {
       align-self: start;
   -ms-grid-column-align: center;
       justify-self: center;
+  display: block;
 }
 
 .newsworld-header-nav {
@@ -105,7 +106,7 @@ body {
 
 #top-headline-div {
   margin: 2rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: .2rem;
@@ -156,12 +157,16 @@ main {
 #top-stories-headline {
   color: black;
   text-transform: capitalize;
-  font-size: 1.7rem;
-  text-align: justify;
+  font-size: 1.3rem;
+  text-align: center;
   font-family: 'Roboto Slab', serif;
-  font-weight: 700;
+  font-weight: 800;
   margin: auto;
   margin: 2rem;
+}
+
+.top-stories-date {
+  text-align: center;
 }
 
 .top-stories-author {
@@ -177,7 +182,6 @@ main {
   font-family: 'Crimson Text', serif;
   font-size: 1.3rem;
   text-align: justify;
-  border-bottom: 1px solid black;
   margin: 3rem;
   margin-bottom: 3rem;
 }
@@ -186,4 +190,75 @@ main {
   margin: auto;
   display: block;
   width: 98%;
+}
+
+@media screen and (min-width: 1000px) {
+  #header-grid {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 5;
+    -ms-grid-row: 1;
+        grid-row-start: 1;
+    grid-row-end: 2;
+    width: 100%;
+    height: 100%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 25% 25% 25% 25%;
+        grid-template-columns: 25% 25% 25% 25%;
+    -ms-grid-rows: 25% 25% 25% 25%;
+        grid-template-rows: 25% 25% 25% 25%;
+    background-color: red;
+  }
+  .newsworld-menu-icon {
+    display: none !important;
+  }
+  .newsworld-h1 {
+    font-size: 4rem;
+    -ms-grid-column: 2;
+        grid-column-start: 2;
+    grid-column-end: 4;
+  }
+  .main-site-grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 25% 25% 25% 25%;
+        grid-template-columns: 25% 25% 25% 25%;
+    -ms-grid-rows: 9rem  30vh 7vh 50vh 5vh;
+        grid-template-rows: 9rem  30vh 7vh 50vh 5vh;
+  }
+  .newsworld-header-nav {
+    -ms-grid-row: 4;
+        grid-row-start: 4;
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 4;
+  }
+  #topstories-top-target {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 48% 48%;
+        grid-template-columns: 48% 48%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-column-gap: 20px;
+            column-gap: 20px;
+  }
+  .topstories {
+    display: -ms-grid;
+    display: grid;
+  }
+  #headline-top-target {
+    -ms-grid-row: 2;
+        grid-row-start: 2;
+    grid-row-end: 4;
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 5;
+    background-color: lightcoral;
+    background-image: url(/images/wolrd-9-1187862.jpg);
+    background-size: cover;
+    background-blend-mode: darken;
+  }
 }

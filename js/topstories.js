@@ -10,24 +10,31 @@ function topStories(response){
         // console.log(product.articles);
         const topStoriesArray = Array.from(product.articles);
         console.log(topStoriesArray);
-        topStoriesArray.length = 5;
+        
+        topStoriesArray.length = 7;
         console.log(topStoriesArray);
         // return topStoriesArray;
         for(let i = 0 ; i < topStoriesArray.length; i++) {
+            const titleSlice = topStoriesArray[i].title.slice(1, length-1)
+            const urlSlice = topStoriesArray[0].urlToImage.slice(0, length)
             const topStorieDiv = document.createElement('div');
+            const nullFinder = '${topStoriesArray[i].description}';
+            noDescription(nullFinder,null);
+            console.log(noDescription);
             topStorieDiv.classList.add('topstories');
             topStorieDiv.innerHTML = `
                 <div class="top-stories carousel-item">
-                    <h2 id="top-stories-headline">${topStoriesArray[i+1].title}</h2>
-                    <h6 class="top-stories-date"></h6>
-                    <img src="${topStoriesArray[i+1].urlToImage}" class="article-img"></img>
+                    <h2 id="top-stories-headline">${topStoriesArray[i].title}</h2>
+                    <img src=${topStoriesArray[i].urlToImage} class="article-img"></img>
+                    <p class="top-stories-description">${topStoriesArray[i].description}</p>
                     <h5 class="top-stories-author">${topStoriesArray[i+1].author}</h5>
-                        <p class="top-stories-description">${topStoriesArray[i].description}</p>
+                    <h6 class="top-stories-date">${topStoriesArray[i+1].publishedAt}</h6>
                 </div>
             
             `
             
             document.getElementById('topstories-top-target').appendChild(topStorieDiv);
+            
      }
         
         // console.log(fetchData.responseTEXT);
@@ -49,3 +56,9 @@ function topStories(response){
 };
 
 topStories();
+function noDescription(array,param){
+    if(array == 'param'){
+
+        array.innerText = "";
+    };
+};
