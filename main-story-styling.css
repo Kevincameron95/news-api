@@ -1,0 +1,70 @@
+.topstories{
+    display: grid;
+    grid-template-columns: 50% 50%;
+        grid-template-rows: 20% 20% 20% 20% 20%;
+}
+.top-stories{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 6;
+    background-image:url(/images/world.jpg);
+}
+
+#top-stories-headline{
+    
+    color:black;
+    text-transform: capitalize;
+    font-size: 1.3rem;
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 800;
+    margin: auto;
+    margin:2rem;
+}
+.top-stories-date{
+    text-align: center;
+}
+
+.top-stories-author{
+    color:red;
+    font-family: 'Aboreto', cursive;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 3rem;
+    
+}
+.top-stories-description{
+    color: black;
+    font-family: 'Crimson Text', serif;
+    font-size: 1.3rem;
+    text-align: justify;
+    // border-bottom: 1px solid black;
+    margin: 3rem;
+    margin-bottom: 3rem;
+}
+
+.article-img{
+
+    margin: auto;
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    
+}
+
+@media screen and (min-width:1000px) {
+
+
+
+
+    #topstories-top-target{
+        display: grid;
+        grid-template-columns: 48% 48%;
+        align-items: center;
+        column-gap: 20px
+        
+    }
+    
+    
+}

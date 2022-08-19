@@ -166,44 +166,6 @@ main {
   color: white;
 }
 
-#top-stories-headline {
-  color: black;
-  text-transform: capitalize;
-  font-size: 1.3rem;
-  text-align: center;
-  font-family: 'Roboto Slab', serif;
-  font-weight: 800;
-  margin: auto;
-  margin: 2rem;
-}
-
-.top-stories-date {
-  text-align: center;
-}
-
-.top-stories-author {
-  color: red;
-  font-family: 'Aboreto', cursive;
-  font-size: 1rem;
-  text-align: center;
-  margin-top: 3rem;
-}
-
-.top-stories-description {
-  color: black;
-  font-family: 'Crimson Text', serif;
-  font-size: 1.3rem;
-  text-align: justify;
-  margin: 3rem;
-  margin-bottom: 3rem;
-}
-
-.article-img {
-  margin: auto;
-  display: block;
-  width: 98%;
-}
-
 @media screen and (max-width: 1000px) {
   .newsworld-header-nav {
     display: none;
@@ -306,21 +268,6 @@ main {
     -ms-grid-row: 1;
         grid-row-start: 1;
     margin-top: 2rem;
-  }
-  #topstories-top-target {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 48% 48%;
-        grid-template-columns: 48% 48%;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-column-gap: 20px;
-            column-gap: 20px;
-  }
-  .topstories {
-    display: -ms-grid;
-    display: grid;
   }
   #headline-top-target {
     -ms-grid-row: 2;
