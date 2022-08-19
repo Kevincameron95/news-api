@@ -11,12 +11,12 @@ function topHeadline(response){
         const topHeadlines = Array.from(product.articles);
         // console.log(topHeadlines);
         topHeadlines.length = 1;
-        const bannerImage = topHeadlines[0].urlToImage;
-        // console.log(topHeadlines[0].urlToImage);
+        
+        
         document.querySelector('#headline-top-target').style.backgroundImage = `url('${topHeadlines[0].urlToImage}')`;
         
         const stringImage = String(topHeadlines[0].urlToImage);
-        console.log(stringImage)
+        // console.log(stringImage)
         // return topHeadlines;
         for(let i = 0 ; i < topHeadlines.length; i++) {
             const headlineDiv = document.createElement('div');
