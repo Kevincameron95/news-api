@@ -32,7 +32,7 @@ function topStories(response){
             // noDescription(nullFinder,null);
             // console.log(noDescription);
             
-            const authorName = topStoriesArray[i].author = topStoriesArray[i].author ? 'Author <br>' + topStoriesArray[i].author: 'From:<br>' + topStoriesArray[i].source.name;
+            const authorName = topStoriesArray[i].author = topStoriesArray[i].author ? 'Author <br>' + topStoriesArray[i].author: 'From:&nbsp;' + topStoriesArray[i].source.name;
             const imgSrc = topStoriesArray[i].urlToImage = topStoriesArray[i].urlToImage ? topStoriesArray[i].urlToImage : `./images/world.jpg`;
             const descriptionSrc = topStoriesArray[i].description = topStoriesArray[i].description ? topStoriesArray[i].description : topStoriesArray[i].source.name;
             function changeImgSize(param){
