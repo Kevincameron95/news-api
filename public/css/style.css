@@ -326,6 +326,8 @@ main {
   #search-bar {
     -ms-grid-column: 5;
         grid-column-start: 5;
+        background-color: lightslategray;
+        
   }
   .newsworld-h1 {
     font-size: 5rem;
