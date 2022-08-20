@@ -1,0 +1,10 @@
+@keyframes HoverLink {
+    
+    50%{
+        background-color: rgb(186, 186, 186);
+        height: 120%;
+    };
+    100%{
+        font-size: 1.9rem;
+    };
+}

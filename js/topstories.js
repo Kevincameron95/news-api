@@ -7,10 +7,10 @@ function topStories(response){
   })
   .then(function (response) {
         const product = response.data
-        // console.log(product.articles);
+        console.log(product.articles);
         const topStoriesArray = Array.from(product.articles);
         // console.log(topStoriesArray);
-        topStoriesArray.length = 20;
+        topStoriesArray.length = 8;
         
         // console.log(topStoriesArray);
         // return topStoriesArray;
@@ -20,7 +20,7 @@ function topStories(response){
           const dateSlice = topStoriesArray[i].publishedAt.slice( 0,10 )
           // const urlSlice = topStoriesArray[0].urlToImage.slice(0, length)
           const topStorieDiv = document.createElement('div');
-          const nullFinder = '${topStoriesArray[i].description}';
+          
           // const backGroundImgTopStories = document.querySelector('.carousel-item');
           
           
@@ -31,20 +31,32 @@ function topStories(response){
             
             // noDescription(nullFinder,null);
             // console.log(noDescription);
+            
+            const authorName = topStoriesArray[i].author = topStoriesArray[i].author ? 'Author <br>' + topStoriesArray[i].author: 'From:<br>' + topStoriesArray[i].source.name;
+            const imgSrc = topStoriesArray[i].urlToImage = topStoriesArray[i].urlToImage ? topStoriesArray[i].urlToImage : `./images/world.jpg`;
+            const descriptionSrc = topStoriesArray[i].description = topStoriesArray[i].description ? topStoriesArray[i].description : topStoriesArray[i].source.name;
+            function changeImgSize(param){
+              if(param == ''){
+                this.classList.add('wide-img');
+              };
+            }
+            const noDescription = topStoriesArray[i].description = topStoriesArray[i].description ? topStoriesArray[i].description : '';
+            
+            console.log(authorName)
             topStorieDiv.classList.add('topstories');
             topStorieDiv.innerHTML = `
                 <div class="top-stories carousel-item">
-                <img src=${topStoriesArray[i].urlToImage} class="article-img"></img>
-                <h2 id="top-stories-headline">${topStoriesArray[i].title}</h2>
-                // <h5 class="top-stories-author">${topStoriesArray[i+1].author}</h5>
-                <p class="top-stories-description">${topStoriesArray[i].description}</p>
+                <img src=${imgSrc} class="article-img" href=${topStoriesArray[i].url}></img>
+                <h2 id="top-stories-headline"><a class="top-stories-links"href=${topStoriesArray[i].url}>${topStoriesArray[i].title}</a></h2>
+                <h5 class="top-stories-author">${authorName}</h5>
+                <p class="top-stories-description">${noDescription}</p>
                 <h6 class="top-stories-date">${dateSlice}</h6>
                 </div>
             
             `
             
             document.getElementById('topstories-top-target').appendChild(topStorieDiv);
-            
+            changeImgSize();
      }
     //  const topStorieDiv = document.querySelector('.topstories');
     //  console.log(topStorieDiv.style.backgroundImage = `url('${topStoriesArray[1].urlToImage}')`);

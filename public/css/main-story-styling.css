@@ -33,6 +33,12 @@
     
     background-color: rgba(193, 193, 193,.6);
 }
+
+.top-stories-links{
+    text-decoration: none;
+    color:black;
+    
+}
 .top-stories-date{
     grid-column-start: 1;
     grid-column-end: 2;
@@ -48,7 +54,8 @@
 
 .top-stories-author{
     color:red;
-    font-family: 'Aboreto', cursive;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 800;
     font-size: 1rem;
     text-align: center;
     /* margin-top: 3rem; */
@@ -119,7 +126,30 @@
 
 @media screen and (min-width:1000px) {
 
-
+    .top-stories-links{
+        text-decoration: none;
+        color:black;
+        font-size: 2.2rem;
+    }
+    #top-stories-headline{
+        grid-column-start: 1;
+        position: relative;
+        z-index: 1;
+        grid-column-end: 3;
+        grid-row-start: 5;
+        grid-row-end: 6;
+        height: 100%;
+        width: 100%;
+        color:black;
+        text-transform: capitalize;
+        font-size: 2.2rem;
+        text-align: center;
+        font-family: 'Roboto Slab', serif;
+        font-weight: 800;
+        margin: auto;
+        
+        background-color: rgba(193, 193, 193,.6);
+    }
 
 
     #topstories-top-target{
