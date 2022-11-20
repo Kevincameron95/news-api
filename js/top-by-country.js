@@ -11,6 +11,7 @@ function canadaHeadline(response){
     canadaStoriesArray.length = 3;
     // console.log(canadaStoriesArray);
     // document.querySelector('#canada-target').style.backgroundImage = `url('${canadaStoriesArray[0].urlToImage}')`;
+    document.getElementById('canada-target').style.backgroundImage= `url('${canadaStoriesArray[0].urlToImage}`
     
 
     for(let i = 2; i < 3; i++){
@@ -20,14 +21,13 @@ function canadaHeadline(response){
         canadaMainStoryTarget.innerHTML = `
         <div class="canada-target-headline">
         <h2 class="canada-target-headline-h2">${canadaStoriesArray[0].title}</h2>
-        <img src=${canadaStoriesArray[0].urlToImage} alt="" class="target-headline-img">
-        </div>
+        
         
         `
         document.getElementById('canada-target').appendChild(canadaMainStoryTarget);
         // console.log(canadaMainStoryTarget);
+        
     }
-    document.getElementsByClassName('headline-container-mark-up-img').style.backgroundImage= `url('${canadaStoriesArray[0].urlToImage}`
     // console.log(response);
   })
   .catch(function (error) {
@@ -51,7 +51,7 @@ function usaHeadline(response){
     const usaStoriesArray = Array.from(usaData.articles);
     usaStoriesArray.length = 3;
     // console.log(usaStoriesArray);
-
+    document.getElementById('usa-target').style.backgroundImage= `url('${usaStoriesArray[0].urlToImage}`
     for(let i = 0; i < 1; i++){
         const usaMainStoryTarget = document.createElement('div');
         usaMainStoryTarget.classList.add('usa-target-div');
@@ -59,8 +59,7 @@ function usaHeadline(response){
         <div class="usa-target-headline">
         <h2 class="usa-target-headline-h2">${usaStoriesArray[0].title}</h2>
         </div>
-        <img src=${usaStoriesArray[0].urlToImage} alt="" class="target-headline-img">
-        </div>
+        
         `
         document.getElementById('usa-target').appendChild(usaMainStoryTarget);
         // console.log(usaMainStoryTarget);
@@ -88,6 +87,7 @@ function ukHeadline(response){
     const ukStoriesArray = Array.from(ukData.articles);
     ukStoriesArray.length = 3;
     console.log(ukStoriesArray);
+    document.getElementById('uk-target').style.backgroundImage= `url('${ukStoriesArray[0].urlToImage}`
 
     for(let i = 0; i < 1; i++){
         const ukMainStoryTarget = document.createElement('div');
@@ -96,8 +96,7 @@ function ukHeadline(response){
         <div class="uk-target-headline">
         <h2 class="uk-target-headline-h2">${ukStoriesArray[0].title}</h2>
         </div>
-        <img src=${ukStoriesArray[0].urlToImage} alt="" class="target-headline-img">
-        </div>
+        
         `
         document.getElementById('uk-target').appendChild(ukMainStoryTarget);
         console.log(ukMainStoryTarget);
@@ -126,6 +125,7 @@ function nzHeadline(response){
     nzStoriesArray.length = 3;
     console.log(nzStoriesArray);
 
+    document.getElementById('nz-target').style.backgroundImage= `url('${nzStoriesArray[0].urlToImage}`
     for(let i = 0; i < 1; i++){
         const nzMainStoryTarget = document.createElement('div');
         nzMainStoryTarget.classList.add('nz-target-div');
@@ -133,8 +133,7 @@ function nzHeadline(response){
         <div class="nz-target-headline">
         <h2 class="nz-target-headline-h2">${nzStoriesArray[0].title}</h2>
         </div>
-        <img src=${nzStoriesArray[0].urlToImage} alt="" class="target-headline-img">
-        </div>
+        
         `
         document.getElementById('nz-target').appendChild(nzMainStoryTarget);
         console.log(nzMainStoryTarget);
@@ -163,6 +162,7 @@ function ausHeadline(response){
     ausStoriesArray.length = 3;
     console.log(ausStoriesArray);
 
+    document.getElementById('aus-target').style.backgroundImage= `url('${ausStoriesArray[0].urlToImage}`
     for(let i = 0; i < 1; i++){
         const ausMainStoryTarget = document.createElement('div');
         ausMainStoryTarget.classList.add('aus-target-div');
