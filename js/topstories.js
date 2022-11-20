@@ -7,7 +7,7 @@ function topStories(response){
   })
   .then(function (response) {
         const product = response.data
-        console.log(product.articles);
+        // console.log(product.articles);
         const topStoriesArray = Array.from(product.articles);
         // console.log(topStoriesArray);
         topStoriesArray.length = 8;
@@ -33,16 +33,21 @@ function topStories(response){
             // console.log(noDescription);
             
             const authorName = topStoriesArray[i].author = topStoriesArray[i].author ? 'Author <br>' + topStoriesArray[i].author: 'From:&nbsp;' + topStoriesArray[i].source.name;
+            
             const imgSrc = topStoriesArray[i].urlToImage = topStoriesArray[i].urlToImage ? topStoriesArray[i].urlToImage : `./images/world.jpg`;
-            const descriptionSrc = topStoriesArray[i].description = topStoriesArray[i].description ? topStoriesArray[i].description : topStoriesArray[i].source.name;
+
+            const descriptionSrc = topStoriesArray[i].description = topStoriesArray[i].
+            description ? topStoriesArray[i].description : topStoriesArray[i].source.name;
+
             function changeImgSize(param){
               if(param == ''){
                 this.classList.add('wide-img');
               };
             }
+
             const noDescription = topStoriesArray[i].description = topStoriesArray[i].description ? topStoriesArray[i].description : '';
             
-            console.log(authorName)
+            // console.log(authorName)
             topStorieDiv.classList.add('topstories');
             topStorieDiv.innerHTML = `
                 <div class="top-stories carousel-item">
@@ -69,7 +74,7 @@ function topStories(response){
      
   })
   .catch(function (error) {
-    console.log(error);
+    // console.log(error);
   })
   .then(function () {
     

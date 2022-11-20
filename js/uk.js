@@ -1,26 +1,26 @@
-function ukHeadline(response){
-    axios.get('//newsapi.org/v2/top-headlines?country=uk&apiKey=76026a085ca64521989707fb570fb5b9', {
+function ausHeadline(response){
+    axios.get('//newsapi.org/v2/top-headlines?country=aus&apiKey=76026a085ca64521989707fb570fb5b9', {
         params: {
             ID:12345
         }
     })
   .then(function (response) {
-    const ukData = response.data;
-    const ukStoriesArray = Array.from(ukData.articles);
-    ukStoriesArray.length = 3;
-    console.log(ukStoriesArray);
+    const ausData = response.data;
+    const ausStoriesArray = Array.from(ausData.articles);
+    ausStoriesArray.length = 3;
+    console.log(ausStoriesArray);
 
     for(let i = 0; i < 1; i++){
-        const ukMainStoryTarget = document.createElement('div');
-        ukMainStoryTarget.classList.add('uk-target-div');
-        ukMainStoryTarget.innerHTML = `
-        <div class="uk-target-headline">
-        <h2 class="uk-target-headline-h2">${ukStoriesArray[0].title}</h2>
+        const ausMainStoryTarget = document.createElement('div');
+        ausMainStoryTarget.classList.add('aus-target-div');
+        ausMainStoryTarget.innerHTML = `
+        <div class="aus-target-headline">
+        <h2 class="aus-target-headline-h2">${ausStoriesArray[0].title}</h2>
         </div>
         
         `
-        document.getElementById('uk-target').appendChild(ukMainStoryTarget);
-        console.log(ukMainStoryTarget);
+        document.getElementById('aus-target').appendChild(ausMainStoryTarget);
+        console.log(ausMainStoryTarget);
     }
     // console.log(response);
   })
@@ -32,4 +32,4 @@ function ukHeadline(response){
   });
 };
 
-ukHeadline();
+ausHeadline();

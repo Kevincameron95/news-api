@@ -26,7 +26,8 @@
 .headline-container-mark-up-img {
   height: 600px;
   width: 100%;
-  background-color: #8787a1;
+  background-size: contain;
+  background-color: blue;
 }
 
 .headline-container-mark-up-img-heading {
@@ -38,8 +39,6 @@
   font-weight: 800;
 }
 
-.headline-container-canada {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+.target-headline-img {
+  width: 100%;
 }
