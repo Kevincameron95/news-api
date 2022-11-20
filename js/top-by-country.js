@@ -19,7 +19,7 @@ function canadaHeadline(response){
         canadaMainStoryTarget.classList.add('canada-target-div');
 
         canadaMainStoryTarget.innerHTML = `
-        <div class="canada-target-headline">
+        <div class="canada-target-headline" >
         <h2 class="canada-target-headline-h2">${canadaStoriesArray[0].title}</h2>
         
         
@@ -56,7 +56,7 @@ function usaHeadline(response){
         const usaMainStoryTarget = document.createElement('div');
         usaMainStoryTarget.classList.add('usa-target-div');
         usaMainStoryTarget.innerHTML = `
-        <div class="usa-target-headline">
+        <div class="usa-target-headline" >
         <h2 class="usa-target-headline-h2">${usaStoriesArray[0].title}</h2>
         </div>
         
@@ -93,7 +93,7 @@ function ukHeadline(response){
         const ukMainStoryTarget = document.createElement('div');
         ukMainStoryTarget.classList.add('uk-target-div');
         ukMainStoryTarget.innerHTML = `
-        <div class="uk-target-headline">
+        <div class="uk-target-headline" >
         <h2 class="uk-target-headline-h2">${ukStoriesArray[0].title}</h2>
         </div>
         
@@ -130,7 +130,7 @@ function nzHeadline(response){
         const nzMainStoryTarget = document.createElement('div');
         nzMainStoryTarget.classList.add('nz-target-div');
         nzMainStoryTarget.innerHTML = `
-        <div class="nz-target-headline">
+        <div class="nz-target-headline" >
         <h2 class="nz-target-headline-h2">${nzStoriesArray[0].title}</h2>
         </div>
         
@@ -167,11 +167,10 @@ function ausHeadline(response){
         const ausMainStoryTarget = document.createElement('div');
         ausMainStoryTarget.classList.add('aus-target-div');
         ausMainStoryTarget.innerHTML = `
-        <div class="aus-target-headline">
+        <div class="aus-target-headline" >
         <h2 class="aus-target-headline-h2">${ausStoriesArray[0].title}</h2>
         </div>
-        <img src=${ausStoriesArray[0].urlToImage} alt="" class="target-headline-img">
-        </div>
+        
         `
         document.getElementById('aus-target').appendChild(ausMainStoryTarget);
         console.log(ausMainStoryTarget);
