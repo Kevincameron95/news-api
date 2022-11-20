@@ -1,4 +1,11 @@
-
+@mixin topStoriesHeadlines {
+    color:black;
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 800;
+}
 
 .top-stories{
     display: grid;
@@ -22,12 +29,7 @@
     grid-row-end: 6;
     height: 100%;
     width: 100%;
-    color:black;
-    text-transform: capitalize;
-    font-size: 1.5rem;
-    text-align: center;
-    font-family: 'Roboto Slab', serif;
-    font-weight: 800;
+    @include topStoriesHeadlines();
     margin: auto;
     
     background-color: rgba(193, 193, 193,.6);

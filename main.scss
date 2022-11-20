@@ -1,3 +1,4 @@
+@import './scss/mixins.scss';
 @import './scss/nav-menu';
 @import './scss/topstories';
 @import './scss/animations';
@@ -13,14 +14,10 @@
 // Variables
 
 // font styles
-@mixin siteTitleFont {
-    color: rgb(255, 255, 255);
-    font-size: 4rem;
-    text-align: center;
-    font-family: 'Abril Fatface', cursive;
-    text-shadow: 1px 3px 3px #777;
-}
 
+@mixin storyHeadlines {
+    
+}
 
 *,
 *::after,

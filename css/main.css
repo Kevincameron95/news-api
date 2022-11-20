@@ -31,6 +31,7 @@
   color: white;
   font-size: 4rem;
   text-align: center;
+  font-family: 'Abril Fatface', cursive;
   text-shadow: 1px 3px 3px #777;
   -ms-grid-row: 2;
       grid-row-start: 2;
