@@ -251,3 +251,60 @@
     }
 
 }
+
+@media screen and (max-width:800px) {
+    
+    .headline-container{
+        display: grid;
+        width: 100vw;
+        height: 100vh;
+        grid-template-columns: [first]40% [second] 20% [third] 20% [fourth] 20% [fifth] 20%;
+        grid-template-rows: max-content max-content max-content max-content;
+        grid-template-areas: "header"
+        "article"
+        "article-two";
+        grid-template-rows: auto;
+        grid-template: [row1-start]"header " [row1-end]
+        [row2-start] "article" [row2-end];
+        
+    
+    
+            &-mark-up{
+                width: 100%;
+                height: 100%;
+                @include worldStoriesHeadlines();
+                
+                // background-color: aqua;
+                &-img{
+                    height: 400px;
+                    width: 100%;
+                    background-size: cover;
+                    background-color: blue;
+                    &-heading{
+                        @include worldStoriesHeadlines();
+                        
+                    }
+                }
+            }
+    
+        }
+
+
+        .canada-target-div{
+            grid-area: header;
+            display:grid;
+                grid-template-columns: 25% 25% 25% 25%;
+                grid-template-rows: 50% 25% 25%;
+        }
+        .canada-target-headline{
+            grid-column: 1/4;
+            grid-row: 2;
+            
+            &-h2{
+                font-size: 2.5rem;
+                margin: 1rem;
+                margin-left: 0rem;
+            }
+        }
+    
+}
