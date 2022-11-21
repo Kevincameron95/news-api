@@ -110,14 +110,27 @@
 
 // media queries
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:800px) {
+    // universal selectors for all articles
+    .target-article-headline{
+        background-color:rgba(0,0,0,.2)
+    }
+
+
     .headline-container-canada{
         grid-area: header;
     }
+    .canada-target-div{
+        display:grid;
+            grid-template-columns: 25% 25% 25% 25%;
+            grid-template-rows: 50% 25% 25%;
+    }
     .canada-target-headline{
-        grid-area: header;
+        grid-column: 1/6;
+        grid-row: 2;
+        
         &-h2{
-            font-size: 1.8rem;
+            font-size: 2.5rem;
             margin: 1rem;
             margin-left: 0rem;
         }
@@ -145,6 +158,61 @@
             }
         }
     }
+    .usa-target{
+        &-div{
+            
+            display:grid;
+            grid-template-columns: 25% 25% 25% 25%;
+            grid-template-rows: 50% 25% 25%;
+        }
+        &-headline{
+            grid-column: 1/6;
+            grid-row: 2;
+            
+            margin: 1rem;
+            margin-left: 0rem;
+            &-h2{
+                font-size: 1.8rem;
+            }
+        }
+    }
+    .nz-target{
+        &-div{
+            
+            display:grid;
+            grid-template-columns: 25% 25% 25% 25%;
+            grid-template-rows: 50% 25% 25%;
+        }
+        &-headline{
+            grid-column: 1/6;
+            grid-row: 2;
+            
+            margin: 1rem;
+            margin-left: 0rem;
+            &-h2{
+                font-size: 1.6rem;
+            }
+        }
+    }
+
+    .aus-target{
+        &-div{
+            
+            display:grid;
+            grid-template-columns: 25% 25% 25% 25%;
+            grid-template-rows: 50% 25% 25%;
+        }
+        &-headline{
+            grid-column: 1/6;
+            grid-row: 2;
+            
+            margin: 1rem;
+            margin-left: 0rem;
+            &-h2{
+                font-size: 1.6rem;
+            }
+        }
+    }
 
 
     .headline-container{
@@ -152,11 +220,13 @@
     width: 100vw;
     height: 100vh;
     grid-template-columns: [first]20% [second] 20% [third] 20% [fourth] 20% [fifth] 20%;
-    grid-template-rows: max-content max-content 1fr 1fr;
+    grid-template-rows: max-content max-content max-content max-content;
     grid-template-areas: "header"
     "article"
     "article-two";
     grid-template-rows: auto;
+    grid-template: [row1-start]"header " [row1-end]
+    [row2-start] "article" [row2-end];
     
 
 
@@ -167,7 +237,7 @@
             
             // background-color: aqua;
             &-img{
-                height: 300px;
+                height: 400px;
                 width: 100%;
                 background-size: cover;
                 background-color: blue;

@@ -20,7 +20,7 @@ function canadaHeadline(response){
 
         canadaMainStoryTarget.innerHTML = `
         <div class="canada-target-headline" >
-        <h2 class="canada-target-headline-h2">${canadaStoriesArray[0].title}</h2>
+        <h2 class="canada-target-headline-h2 target-article-headline">${canadaStoriesArray[0].title}</h2>
         
         
         `
@@ -57,7 +57,7 @@ function usaHeadline(response){
         usaMainStoryTarget.classList.add('usa-target-div');
         usaMainStoryTarget.innerHTML = `
         <div class="usa-target-headline" >
-        <h2 class="usa-target-headline-h2">${usaStoriesArray[0].title}</h2>
+        <h2 class="usa-target-headline-h2 target-article-headline">${usaStoriesArray[0].title}</h2>
         </div>
         
         `
@@ -94,7 +94,7 @@ function ukHeadline(response){
         ukMainStoryTarget.classList.add('uk-target-div');
         ukMainStoryTarget.innerHTML = `
         <div class="uk-target-headline" >
-        <h2 class="uk-target-headline-h2">${ukStoriesArray[0].title}</h2>
+        <h2 class="uk-target-headline-h2 target-article-headline">${ukStoriesArray[0].title}</h2>
         </div>
         
         `
@@ -131,7 +131,7 @@ function nzHeadline(response){
         nzMainStoryTarget.classList.add('nz-target-div');
         nzMainStoryTarget.innerHTML = `
         <div class="nz-target-headline" >
-        <h2 class="nz-target-headline-h2">${nzStoriesArray[0].title}</h2>
+        <h2 class="nz-target-headline-h2 target-article-headline">${nzStoriesArray[0].title}</h2>
         </div>
         
         `
@@ -168,7 +168,7 @@ function ausHeadline(response){
         ausMainStoryTarget.classList.add('aus-target-div');
         ausMainStoryTarget.innerHTML = `
         <div class="aus-target-headline" >
-        <h2 class="aus-target-headline-h2">${ausStoriesArray[0].title}</h2>
+        <h2 class="aus-target-headline-h2 target-article-headline">${ausStoriesArray[0].title}</h2>
         </div>
         
         `

@@ -63,6 +63,13 @@
         background-color: red;
     }
 }
+
+#home-page-link{
+    text-transform: uppercase;
+    @include siteTitleFont;
+    color: whitesmoke;
+}
+
 .button-menu{
     background-color: rgba(222, 206, 206, 0);
     border: none;
