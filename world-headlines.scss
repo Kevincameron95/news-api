@@ -112,10 +112,72 @@
 
 @media screen and (max-width:600px) {
     .headline-container-canada{
-        grid-column: 1/5;
+        grid-area: header;
     }
     .canada-target-headline{
-        grid-column: 1/4;
-        grid-row: 3;
+        grid-area: header;
+        &-h2{
+            font-size: 1.8rem;
+            margin: 1rem;
+            margin-left: 0rem;
+        }
+
+        
     }
+    .headline-container-uk{
+        grid-area: article;
+    }
+    .uk-target{
+        &-div{
+            
+            display:grid;
+            grid-template-columns: 25% 25% 25% 25%;
+            grid-template-rows: 50% 25% 25%;
+        }
+        &-headline{
+            grid-column: 1/6;
+            grid-row: 2;
+            
+            margin: 1rem;
+            margin-left: 0rem;
+            &-h2{
+                font-size: 1.8rem;
+            }
+        }
+    }
+
+
+    .headline-container{
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: [first]20% [second] 20% [third] 20% [fourth] 20% [fifth] 20%;
+    grid-template-rows: max-content max-content 1fr 1fr;
+    grid-template-areas: "header"
+    "article"
+    "article-two";
+    grid-template-rows: auto;
+    
+
+
+        &-mark-up{
+            width: 100%;
+            height: 100%;
+            @include worldStoriesHeadlines();
+            
+            // background-color: aqua;
+            &-img{
+                height: 300px;
+                width: 100%;
+                background-size: cover;
+                background-color: blue;
+                &-heading{
+                    @include worldStoriesHeadlines();
+                    
+                }
+            }
+        }
+
+    }
+
 }

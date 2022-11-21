@@ -1,6 +1,6 @@
 // Canada
 function canadaHeadline(response){
-    axios.get('//newsapi.org/v2/top-headlines?country=ca&apiKey=76026a085ca64521989707fb570fb5b9', {
+    axios.get('//newsapi.org/v2/top-headlines?country=ca&apiKey=447b8c1c1861481a95578726345b1cf9', {
         params: {
             ID:12345
         }
@@ -41,7 +41,7 @@ function canadaHeadline(response){
 canadaHeadline();
 
 function usaHeadline(response){
-    axios.get('//newsapi.org/v2/top-headlines?country=us&apiKey=76026a085ca64521989707fb570fb5b9', {
+    axios.get('//newsapi.org/v2/top-headlines?country=us&apiKey=447b8c1c1861481a95578726345b1cf9', {
         params: {
             ID:12345
         }
@@ -77,7 +77,7 @@ function usaHeadline(response){
 usaHeadline();
 
 function ukHeadline(response){
-    axios.get('//newsapi.org/v2/top-headlines?country=gb&apiKey=76026a085ca64521989707fb570fb5b9', {
+    axios.get('//newsapi.org/v2/top-headlines?country=gb&apiKey=447b8c1c1861481a95578726345b1cf9', {
         params: {
             ID:12345
         }
@@ -114,7 +114,7 @@ function ukHeadline(response){
 ukHeadline();
 
 function nzHeadline(response){
-    axios.get('//newsapi.org/v2/top-headlines?country=nz&apiKey=76026a085ca64521989707fb570fb5b9', {
+    axios.get('//newsapi.org/v2/top-headlines?country=nz&apiKey=447b8c1c1861481a95578726345b1cf9', {
         params: {
             ID:12345
         }
@@ -151,7 +151,7 @@ function nzHeadline(response){
 nzHeadline();
 
 function ausHeadline(response){
-    axios.get('//newsapi.org/v2/top-headlines?country=au&apiKey=76026a085ca64521989707fb570fb5b9', {
+    axios.get('//newsapi.org/v2/top-headlines?country=au&apiKey=447b8c1c1861481a95578726345b1cf9', {
         params: {
             ID:12345
         }

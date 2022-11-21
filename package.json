@@ -9,6 +9,8 @@
   "author": "Kevin Cameron",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.27.2"
+    "@mozilla/readability": "^0.4.2",
+    "axios": "^0.27.2",
+    "jsdom": "^20.0.3"
   }
 }
