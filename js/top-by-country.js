@@ -56,7 +56,7 @@ function usaHeadline(response){
         const usaMainStoryTarget = document.createElement('div');
         usaMainStoryTarget.classList.add('usa-target-div');
         usaMainStoryTarget.innerHTML = `
-        <div class="usa-target-headline" >
+        <div class="usa-target-headline one-third-headline" >
         <h2 class="usa-target-headline-h2 target-article-headline">${usaStoriesArray[0].title}</h2>
         </div>
         

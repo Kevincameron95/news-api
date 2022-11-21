@@ -28,7 +28,7 @@
             height: 600px;
             width: 100%;
             background-size: cover;
-            background-color: blue;
+            background-image: url(/images/world.jpg);
             &-heading{
                 @include worldStoriesHeadlines();
                 
@@ -69,7 +69,17 @@
 }
 
 
-
+.usa-target{
+    &-div{
+        display:grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: 50% 25% 25%;
+    }
+    &-headline{
+        grid-column: 1/5;
+        grid-row: 3;
+    }
+}
 .aus-target{
     &-div{
         display:grid;
@@ -130,8 +140,8 @@
         grid-row: 2;
         
         &-h2{
-            font-size: 2.5rem;
-            margin: 1rem;
+            font-size: 2.3rem;
+            margin: 2rem;
             margin-left: 0rem;
         }
 
@@ -185,7 +195,7 @@
         }
         &-headline{
             grid-column: 1/6;
-            grid-row: 2;
+            grid-row: 3;
             
             margin: 1rem;
             margin-left: 0rem;
@@ -252,20 +262,18 @@
 
 }
 
-@media screen and (max-width:800px) {
+@media screen and (min-width:800px) {
     
     .headline-container{
         display: grid;
         width: 100vw;
         height: 100vh;
-        grid-template-columns: [first]40% [second] 20% [third] 20% [fourth] 20% [fifth] 20%;
-        grid-template-rows: max-content max-content max-content max-content;
-        grid-template-areas: "header"
-        "article"
-        "article-two";
-        grid-template-rows: auto;
-        grid-template: [row1-start]"header " [row1-end]
-        [row2-start] "article" [row2-end];
+        grid-template-columns:repeat(12, 8.33% [first-column]) [first-column-end];
+        // grid-template-columns: repeat(3,33.33%[col2]) [col2-end];
+       
+        grid-template-rows: max-content max-content;
+        column-gap: 0%;
+        
         
     
     
@@ -276,7 +284,7 @@
                 
                 // background-color: aqua;
                 &-img{
-                    height: 400px;
+                    height: 600px;
                     width: 100%;
                     background-size: cover;
                     background-color: blue;
@@ -288,22 +296,107 @@
             }
     
         }
-
+        .headline-container-canada{
+            grid-row: 1/2;
+            grid-column: 1/13;
+        }
 
         .canada-target-div{
             grid-area: header;
-            display:grid;
-                grid-template-columns: 25% 25% 25% 25%;
-                grid-template-rows: 50% 25% 25%;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+                
+            // width: 100%;
         }
         .canada-target-headline{
-            grid-column: 1/4;
-            grid-row: 2;
+            grid-column: 1/7;
+            grid-row: 3;
             
             &-h2{
-                font-size: 2.5rem;
-                margin: 1rem;
-                margin-left: 0rem;
+                grid-column: 1/7;
+                font-size: 3.5rem;
+                
+            }
+        }
+        .headline-container-mark-up-img{}
+        .headline-container-usa{
+            grid-column: 1/7;
+            grid-row: 2;
+         
+        }
+        .usa-target{
+            
+            
+            &-div{
+                box-shadow: 5px 5px 5px black;
+                display:grid;
+                grid-template-columns: 25% 25% 25% 25%;
+                grid-template-rows: 50% 25% 25%;
+            }
+            &-headline{
+                grid-column: 1/7;
+                grid-row: 2;
+                margin: 5%;
+            }
+        }
+        .headline-container-uk{
+            grid-column: 7/13;
+            grid-row: 2/3;
+        }
+        .uk-target{
+            
+            
+            &-div{
+           
+                display:grid;
+                grid-template-columns: 25% 25% 25% 25%;
+                grid-template-rows: 50% 25% 25%;
+            }
+            &-headline{
+                grid-column: 1/5;
+                grid-row: 2;
+                margin: 5%;
+            }
+        }
+    
+        .headline-container-aus{
+            grid-column: 1/7;
+            grid-row: 3;
+        }
+        .aus-target{
+            
+            
+            &-div{
+           
+                display:grid;
+                grid-template-columns: 25% 25% 25% 25%;
+                grid-template-rows: 50% 25% 25%;
+            }
+            &-headline{
+                grid-column: 1/6;
+                grid-row: 2;
+                margin: 5%;
+            }
+        }
+    
+        .headline-container-nz{
+            grid-column: 7/13;
+            grid-row: 3;
+        }
+        .nz-target{
+            
+            &-div{
+                width: 100%;
+                
+                display:grid;
+                grid-template-columns: 25% 25% 25% 25%;
+                grid-template-rows: 50% 25% 25%;
+            }
+            &-headline{
+                grid-column: 1/5;
+                grid-row: 2;
+                margin: 5%;
             }
         }
     
