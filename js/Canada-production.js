@@ -20,12 +20,12 @@ function canadaHeadline(response){
 
         canadaMainStoryTarget.innerHTML = `
         <div class="canada-target-headline" >
-              <h2 class="canada-target-headline-h2 target-article-headline">${canadaStoriesArray[0].title}</h2>
+        <h2 class="canada-target-headline-h2 target-article-headline">${canadaStoriesArray[0].title}</h2>
+        <a class="headline-story-hot-link" href="${canadaStoriesArray[i].url}">Read More</a>
         
               
-              <a class="headline-story-hot-link" href="${canadaStoriesArray[i].url}">Read More</a>
               
-        </div> 
+              </div> 
         `
         document.getElementById('canada-target').appendChild(canadaMainStoryTarget);
         // console.log(canadaMainStoryTarget);
