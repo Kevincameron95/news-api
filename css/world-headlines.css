@@ -185,7 +185,7 @@
     -ms-grid-row: 7;
     -ms-grid-row-span: 1;
     grid-row: 7/8;
-    font-size: .7rem;
+    font-size: .8rem;
     background-color: rgba(94, 94, 94, 0.3);
     height: 100%;
     width: 100%;
@@ -200,7 +200,7 @@
     -ms-grid-row: 8;
     -ms-grid-row-span: 2;
     grid-row: 8/10;
-    font-size: .7rem;
+    font-size: .8rem;
     background-color: rgba(94, 94, 94, 0.5);
     width: 100%;
     height: 100%;
@@ -223,12 +223,12 @@
     grid-row: 7;
     -ms-grid-column: 10;
     grid-column: 10;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     color: #a8a8a8;
     -webkit-box-shadow: 5px 4px 12px rgba(0, 0, 0, 0.8);
             box-shadow: 5px 4px 12px rgba(0, 0, 0, 0.8);
     border-radius: .5rem;
-    width: 90px;
+    width: 30%;
     margin: auto;
     opacity: 1;
     background-color: rgba(173, 14, 14, 0.3);
@@ -480,12 +480,13 @@
     display: grid;
     -ms-grid-columns: 50% 25% 25%;
         grid-template-columns: 50% 25% 25%;
-    -ms-grid-rows: 10rem 10rem;
-        grid-template-rows: 10rem 10rem;
+    -ms-grid-rows: 7rem 7rem;
+        grid-template-rows: 7rem 7rem;
   }
   .canada-target-headline {
     -ms-grid-row: 1;
-    grid-row: 1;
+    -ms-grid-row-span: 3;
+    grid-row: 1/4;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -512,20 +513,11 @@
     -ms-grid-row: 3;
     grid-row: 3;
     color: white;
-    background-color: rgba(173, 14, 14, 0.3);
-    font-size: 2.9rem;
-    color: #a8a8a8;
-    -webkit-box-shadow: 5px 4px 12px rgba(0, 0, 0, 0.8);
-            box-shadow: 5px 4px 12px rgba(0, 0, 0, 0.8);
-    border-radius: .5rem;
-    width: 25%;
-    margin: auto;
-    opacity: 0.7;
-    background-color: rgba(173, 14, 14, 0.3);
-    border: 1px solid black;
-    padding: 1rem;
-    background-color: rgba(0, 0, 0, 0.2);
-    opacity: .99;
+    background-color: rgba(173, 14, 14, 0.7);
+    text-decoration: none;
+    font-size: 2.89rem;
+    position: relative;
+    top: 0rem;
     border: 1px solid black;
     padding: 1rem;
   }
@@ -545,6 +537,7 @@
     background-color: rgba(173, 14, 14, 0.3);
     border: 1px solid black;
     padding: 1rem;
+    border-radius: 0%;
     margin-right: auto;
     text-decoration: none;
     -webkit-box-align: center;
