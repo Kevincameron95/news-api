@@ -9,6 +9,19 @@
     background-color: rgba(0,0,0,.2);
 }
 
+@mixin read-more-button($width,$fontrems,$opacity) {
+    font-size: $fontrems;
+    color: rgb(168, 168, 168);
+    box-shadow: 5px 4px 12px rgba(0,0,0,.8);
+    border-radius: .5rem ;
+    width: $width;
+    margin: auto;
+    opacity: $opacity;
+    background-color: rgba(173, 14, 14, 0.3);
+    border: 1px solid black;
+    padding: 1rem;
+}
+
 .headline-container{
     display: grid;
     width: 100vw;
@@ -29,6 +42,7 @@
             width: 100%;
             background-size: cover;
             background-image: url(/images/world.jpg);
+            
             &-heading{
                 @include worldStoriesHeadlines();
                 
@@ -41,10 +55,10 @@
 .data-target{
         // display: none;
         height: 100%;
-        background-size: cover;
+        background-size: contain;
         display: flex;
         align-content: center;
-        
+        background-attachment: fixed;
         
 
     
@@ -125,7 +139,24 @@
     .target-article-headline{
         background-color:rgba(0,0,0,.2)
     }
+    .data-target{
+        // display: none;
+        height: 100%;
+        background-size: 195%;
+        
+        background-repeat: no-repeat;
+        display: flex;
+        align-content: center;
+        background-attachment:fixed;
+    }   
+    
     #canada-target{
+        display: grid;
+        grid-template-columns: repeat(12, 8.33%);
+        grid-template-rows: repeat(3,10%) 10%  minmax(25%,20%) 10% 10% ;
+        height: 400px;
+    }
+    .canada-target-div{
         display: grid;
         grid-template-columns: repeat(12, 8.33%);
         grid-template-rows: repeat(3,10%) 10%  minmax(25%,20%) 10% 10% ;
@@ -143,6 +174,13 @@
         justify-self: center;
         border-top: 1px solid rgb(0, 0, 0);
     }
+    .headline-story-hot-link{
+     @include read-more-button(100%,4.5rem,.8);
+     opacity: .8;
+     background-color: rgba(173, 14, 14, 0.3);
+     border: 1px solid black;
+     padding: 1rem;
+    }
     .block1{
         justify-self: center;
         grid-column: 1/13;
@@ -154,15 +192,16 @@
         border-top: 1px solid rgb(0, 0, 0);
     }
     .secondary-links{
+        display:flex ;
         grid-row: 7;
         grid-column: 10/13;
-    }
-    .canada-second-headline{
-        display: flex;
-        justify-content: center;
+        @include read-more-button(200px,1rem,.8);
+        height: 3rem;
+        text-decoration: none;
         align-items: center;
-
+        justify-content: center;
     }
+    
     
     
 
@@ -171,13 +210,12 @@
     }
     .canada-target-div{
         grid-column: 1/13;
-        grid-row: 4;
+        grid-row: 3/3;
+        display: flex;
 
     }
     .canada-target-headline{
-        grid-column: 1/13;
-        grid-row: 3;
-        
+      
         &-h2{
             width: 100%;
             font-size: 2.3rem;
@@ -185,11 +223,15 @@
             margin-top: 0rem;
             margin-left: 0rem;
         }
-       
-    
-    
-    
     }
+
+    .canada-second-headline{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
     .headline-container-uk{
         grid-area: article;
     }
@@ -304,11 +346,8 @@
     }
 
 }
-.headline-pics{
-    width: 10%;
-}
 
-@media screen and (min-width:800px) {
+@media screen and (min-width:800px){
     
     .headline-container{
         display: grid;
@@ -316,7 +355,6 @@
         height: 100vh;
         grid-template-columns:repeat(12, 8.33% [first-column]) [first-column-end];
         // grid-template-columns: repeat(3,33.33%[col2]) [col2-end];
-       
         grid-template-rows: max-content max-content;
         column-gap: 0%;
         
@@ -351,18 +389,41 @@
             grid-template-columns: repeat(12, 8.33%);
             grid-template-rows: repeat(4, 25%);
         }
+        // article photo
+        .data-target{
+            // display: none;
+            height: 100%;
+            background-size: 170%;
+            // background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-content: center;
+            background-attachment: fixed;
+        }  
         .canada-target-div{
             
             grid-column: 1/13;
-            grid-row: 2;
+            grid-row: 3;
+            display: grid;
+            grid-template-columns: 50% 25% 25%;
+
         }
         .canada-target-headline{
-            
+            grid-row: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             &-h2{
                 grid-column: 1/13;
+                
                 font-size: 3.5rem;
                 
             }
+        }
+        .headline-story-hot-link{
+            grid-row: 3;
+            grid-column: 3;
+            @include read-more-button(100%,2rem,.8);
         }
 // secondary stories
 
@@ -392,11 +453,11 @@
             font-size: 1.7rem;
             text-transform: uppercase;
             text-align: center;
-
-            
+   
         }
+
         .read-more-button-canada{
-            grid-row: 2;
+            @include read-more-button(100%,2rem,.8);
             font-size: 1rem;
             color: white;
         }
@@ -482,4 +543,16 @@
             }
         }
     
+}
+@media screen and (min-width:1365px) {
+    .data-target{
+        // display: none;
+        height: 100%;
+        background-size: contain;
+        background-position: top;
+        background-repeat: no-repeat;
+        display: flex;
+        align-content: center;
+        background-attachment: fixed;
+    } 
 }
