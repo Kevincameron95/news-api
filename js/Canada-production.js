@@ -22,9 +22,9 @@ function canadaHeadline(response){
         <div class="canada-target-headline" >
               <h2 class="canada-target-headline-h2 target-article-headline">${canadaStoriesArray[0].title}</h2>
         
-              <div class="read-the-article-button-flexbox">
-              <a class="headline-story-hot-link" href="${canadaStoriesArray[i].url}">read the article</a>
-              </div>
+              
+              <a class="headline-story-hot-link" href="${canadaStoriesArray[i].url}">Read More</a>
+              
         </div> 
         `
         document.getElementById('canada-target').appendChild(canadaMainStoryTarget);
