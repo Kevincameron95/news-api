@@ -35,11 +35,11 @@ function canadaHeadline(response){
       canadaSecondaryStories.innerHTML = `
         <div class="canada-second-headline" >
         <h2 class="canada-target-secondary-headline-h2 target-article-headline-secondary">${canadaStoriesArray[i+1].title}</h2>
-        <a class="secondary-links" href="${canadaStoriesArray[i+1].title}">read more</a>
         
         
+        <a class="secondary-links" href="${canadaStoriesArray[i+1].url}">read more</a>
         </div>
-        </div>
+        
         `
         document.getElementById('canada-target').appendChild(canadaSecondaryStories);
     }

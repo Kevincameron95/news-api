@@ -186,6 +186,13 @@
     width: 100%;
     border-top: 1px solid black;
   }
+  .secondary-links {
+    -ms-grid-row: 7;
+    grid-row: 7;
+    -ms-grid-column: 10;
+    -ms-grid-column-span: 3;
+    grid-column: 10/13;
+  }
   .canada-second-headline {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -436,6 +443,9 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     border: 1px solid black;
   }
   .block1 {
@@ -451,14 +461,18 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     border: 1px solid black;
   }
   .target-article-headline-secondary {
     margin: 1rem;
   }
   .canada-target-secondary-headline-h2 {
-    font-size: 2rem;
+    font-size: 1.7rem;
     text-transform: uppercase;
+    text-align: center;
   }
   .read-more-button-canada {
     -ms-grid-row: 2;

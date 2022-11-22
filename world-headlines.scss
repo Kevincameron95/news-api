@@ -153,13 +153,17 @@
         width: 100%;
         border-top: 1px solid rgb(0, 0, 0);
     }
+    .secondary-links{
+        grid-row: 7;
+        grid-column: 10/13;
+    }
     .canada-second-headline{
         display: flex;
         justify-content: center;
         align-items: center;
 
     }
-   
+    
     
 
     .headline-container-canada{
@@ -367,6 +371,7 @@
             background-color: rgba(0,0,0,.3);
             display: flex;
             align-items: center;
+            justify-content: center;
             border: 1px solid black;
         }
         .block1{
@@ -375,6 +380,7 @@
             background-color: rgba(0,0,0,.3);
             display: flex;
             align-items: center;
+            justify-content: center;
             border: 1px solid black;
             
         }
@@ -382,8 +388,9 @@
             margin: 1rem;
         }
         .canada-target-secondary-headline-h2{
-            font-size: 2rem;
+            font-size: 1.7rem;
             text-transform: uppercase;
+            text-align: center;
 
             
         }
