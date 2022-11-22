@@ -13,13 +13,34 @@
     font-size: $fontrems;
     color: rgb(168, 168, 168);
     box-shadow: 5px 4px 12px rgba(0,0,0,.8);
-    border-radius: .5rem ;
+    // border-radius: .5rem ;
     width: $width;
     margin: auto;
     opacity: $opacity;
     background-color: rgba(173, 14, 14, 0.3);
     border: 1px solid black;
     padding: 1rem;
+    position: relative;
+
+    &-hover{
+        animation: read-more-button;
+        animation-duration: 2s;
+        animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+    }
+
+}
+
+@keyframes read-more-button{
+
+0%{
+    top:0rem;
+}
+50%{
+    top:10rem;
+}
+100%{
+    top:5rem;
+}
 }
 
 .headline-container{
@@ -63,10 +84,12 @@
 
     
 }
-
+.Canada-title{
+    font-size: 2rem;
+}
 // Target content flexbox 
 .target-content{
-    ;
+    
 }
 
 .canada-target{
@@ -133,6 +156,61 @@
 }
 
 // media queries
+@media screen and (max-width:400px){
+    .block1{
+        justify-self: center;
+        grid-column: 1/13;
+        grid-row: 7/8;
+        font-size: 1rem;
+        background-color:  rgba(94, 94, 94,.3);
+        height: 100%;
+        width: 100%;
+        border-top: 1px solid rgb(0, 0, 0);
+        padding-left: 3rem;
+        margin-right: 1rem;
+    }
+    .block0{
+        grid-column: 1/13;
+        grid-row:8/10;
+        font-size: .8rem;
+        background-color:  rgba(94, 94, 94,.5);
+        width: 50%;
+        height: 100%;
+        border-bottom: 1px solid black;
+        justify-self: center;
+        border-top: 1px solid rgb(0, 0, 0);
+        padding-left: 3rem;
+        margin-right: 1rem;
+    }
+}
+@media screen and (max-width:600px){
+    .block1{
+        justify-self: center;
+        grid-column: 1/13;
+        grid-row: 7/8;
+        font-size: 1.2rem;
+        background-color:  rgba(94, 94, 94,.3);
+        height: 100%;
+        width: 100%;
+        border-top: 1px solid rgb(0, 0, 0);
+        padding-left: 3rem;
+        margin-right: 1rem;
+    }
+    .block0{
+        grid-column: 1/13;
+        grid-row:8/10;
+        font-size: 1.8rem;
+        background-color:  rgba(94, 94, 94,.5);
+        width: 100%;
+        height: 100%;
+        border-bottom: 1px solid black;
+        justify-self: center;
+        border-top: 1px solid rgb(0, 0, 0);
+        padding-left: 3rem;
+        margin-right: 1rem;
+    }
+}
+
 
 @media screen and (max-width:800px) {
     // universal selectors for all articles
@@ -149,6 +227,15 @@
         align-content: center;
         background-attachment:fixed;
     }   
+    .data-target:nth-child(1), .data-target:nth-child(2), .data-target:nth-child(3){
+        height: 150%;
+        
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: flex;
+        
+        background-attachment:fixed;
+    }
     
     #canada-target{
         display: grid;
@@ -196,11 +283,19 @@
      border: 1px solid black;
      padding: 1rem;
     }
+    .headline-story-hot-link:hover{
+        
+            animation: read-more-button;
+            animation-duration: 2s;
+            animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+            animation-iteration-count: infinite;
+        
+    }
     .secondary-links{
         grid-row: 7;
         grid-column: 10;
         
-        @include read-more-button(30%,.6rem,1);
+        @include read-more-button(30%,.9rem,.7);
         margin-right: auto;
         text-decoration: none;
         align-items: center;
@@ -258,6 +353,9 @@
             }
         }
     }
+    .country-h2{
+        font-size: 3rem;
+    }
     .usa-target{
         &-div{
             
@@ -275,6 +373,7 @@
                 font-size: 1.8rem;
             }
         }
+
     }
     .nz-target{
         &-div{
@@ -379,11 +478,14 @@
                     background-color: blue;
                     &-heading{
                         @include worldStoriesHeadlines();
-                        
+                        font-size: 3rem;
                     }
                 }
             }
     
+        }
+        .headline-container-mark-up-img-heading{
+            font-size: 6rem;
         }
         .headline-container-canada{
             grid-row: 1/2;
@@ -398,8 +500,8 @@
         .data-target{
             // display: none;
             height: 100%;
-            background-size: 170%;
-            // background-position: center;
+            background-size: cover;
+            background-position: center;
             background-repeat: no-repeat;
             display: flex;
             align-content: center;
@@ -502,7 +604,7 @@
             
             
             &-div{
-                box-shadow: 5px 5px 5px black;
+                // box-shadow: 5px 5px 5px black;
                 display:grid;
                 grid-template-columns: 25% 25% 25% 25%;
                 grid-template-rows: 50% 25% 25%;
@@ -585,4 +687,52 @@
         align-content: center;
         background-attachment: fixed;
     } 
+}
+@media screen and (min-width:1500px){
+    .data-target{
+        // display: none;
+        height: 100%;
+        background-size: contain;
+        background-position: top;
+        background-repeat: no-repeat;
+        display: flex;
+        align-content: center;
+        background-attachment: fixed;
+    } 
+
+    .canada-target-headline{
+        grid-row: 0/3;
+        grid-column: 1/13;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 10;
+        width: 96%;
+        max-width: 1500px;
+        &-h2{
+            
+            background-color: rgba(0,0,0,.8);
+            font-size: 4rem;
+            border-top: 1px solid black;  
+            width: 100%; 
+            border-top: 1px solid black;   
+        }
+    }
+    .read-the-article-button-flexbox{
+        width: 100%;
+        
+    }
+    .headline-story-hot-link{
+        grid-row: 3;
+        color: white;
+        background-color: rgba(173, 14, 14, 0.7);
+        // @include read-more-button(25%,2.9rem,.9);
+        // background-color: rgb(255, 7, 7);
+        text-decoration: none;
+        font-size: 3.39rem;
+        position: relative;
+        top: 0rem;
+        border: 1px solid black;
+        padding: 1rem;
+        }
 }
