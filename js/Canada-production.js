@@ -9,7 +9,7 @@ function canadaHeadline(response){
     const canadaData = response.data;
     const canadaStoriesArray = Array.from(canadaData.articles);
     canadaStoriesArray.length = 3;
-    // console.log(canadaStoriesArray);
+    console.log(canadaStoriesArray);
     // document.querySelector('#canada-target').style.backgroundImage = `url('${canadaStoriesArray[0].urlToImage}')`;
     document.getElementById('canada-target').style.backgroundImage= `url('${canadaStoriesArray[0].urlToImage}`
     
@@ -27,6 +27,21 @@ function canadaHeadline(response){
         document.getElementById('canada-target').appendChild(canadaMainStoryTarget);
         // console.log(canadaMainStoryTarget);
         
+    }
+    for(let i= 0; i <2; i++){
+      const canadaSecondaryStories = document.createElement('div');
+      canadaSecondaryStories.classList.add('secondary-stories-div-canada');
+      canadaSecondaryStories.className = 'block'+ i;
+      canadaSecondaryStories.innerHTML = `
+        <div class="canada-second-headline" >
+        <h2 class="canada-target-secondary-headline-h2 target-article-headline-secondary">${canadaStoriesArray[i+1].title}</h2>
+        <a class="secondary-links" href="${canadaStoriesArray[i+1].title}">read more</a>
+        
+        
+        </div>
+        </div>
+        `
+        document.getElementById('canada-target').appendChild(canadaSecondaryStories);
     }
     // console.log(response);
   })
