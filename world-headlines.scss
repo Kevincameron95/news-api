@@ -163,24 +163,6 @@
         height: 400px;
     }
     // 2nd, third top story section. 
-    .block0{
-        grid-column: 1/13;
-        grid-row:8/9;
-        font-size: .7rem;
-        background-color:  rgba(94, 94, 94,.5);
-        width: 100%;
-        height: 100%;
-        border-bottom: 1px solid black;
-        justify-self: center;
-        border-top: 1px solid rgb(0, 0, 0);
-    }
-    .headline-story-hot-link{
-     @include read-more-button(100%,4.5rem,.8);
-     opacity: .8;
-     background-color: rgba(173, 14, 14, 0.3);
-     border: 1px solid black;
-     padding: 1rem;
-    }
     .block1{
         justify-self: center;
         grid-column: 1/13;
@@ -190,13 +172,36 @@
         height: 100%;
         width: 100%;
         border-top: 1px solid rgb(0, 0, 0);
+        padding-left: 3rem;
+        margin-right: 1rem;
+    }
+    .block0{
+        grid-column: 1/13;
+        grid-row:8/10;
+        font-size: .7rem;
+        background-color:  rgba(94, 94, 94,.5);
+        width: 100%;
+        height: 100%;
+        border-bottom: 1px solid black;
+        justify-self: center;
+        border-top: 1px solid rgb(0, 0, 0);
+        padding-left: 3rem;
+        margin-right: 1rem;
+    }
+    .headline-story-hot-link{
+     color: white;
+     background-color: rgba(173, 14, 14, 0.3);
+     
+     opacity: .99;
+     border: 1px solid black;
+     padding: 1rem;
     }
     .secondary-links{
-        display:flex ;
         grid-row: 7;
-        grid-column: 10/13;
-        @include read-more-button(200px,1rem,.8);
-        height: 3rem;
+        grid-column: 10;
+        
+        @include read-more-button(90px,.8rem,1);
+        margin-right: auto;
         text-decoration: none;
         align-items: center;
         justify-content: center;

@@ -20,9 +20,12 @@ function canadaHeadline(response){
 
         canadaMainStoryTarget.innerHTML = `
         <div class="canada-target-headline" >
-        <h2 class="canada-target-headline-h2 target-article-headline">${canadaStoriesArray[0].title}</h2>
-        <a class="headline-story-hot-link" href="${canadaStoriesArray[i].url}">read the article</a>
-        </div>
+              <h2 class="canada-target-headline-h2 target-article-headline">${canadaStoriesArray[0].title}</h2>
+        
+              <div class="read-the-article-button-flexbox">
+              <a class="headline-story-hot-link" href="${canadaStoriesArray[i].url}">read the article</a>
+              </div>
+        </div> 
         `
         document.getElementById('canada-target').appendChild(canadaMainStoryTarget);
         // console.log(canadaMainStoryTarget);
@@ -37,9 +40,9 @@ function canadaHeadline(response){
         <h2 class="canada-target-secondary-headline-h2 target-article-headline-secondary">${canadaStoriesArray[i+1].title}</h2>
         
         
-        <a class="secondary-links" href="${canadaStoriesArray[i+1].url}">Read Article</a>
-        </div>
+        <a class="secondary-links" href="${canadaStoriesArray[i+1].url}">Read More</a>
         
+        </div>
         `
         document.getElementById('canada-target').appendChild(canadaSecondaryStories);
     }
