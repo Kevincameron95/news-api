@@ -67,7 +67,7 @@ function usaHeadline(response){
     // console.log(response);
   })
   .catch(function (error) {
-    console.log(error);
+    // console.log(error);
   })
   .then(function () {
     // always executed
@@ -86,7 +86,7 @@ function ukHeadline(response){
     const ukData = response.data;
     const ukStoriesArray = Array.from(ukData.articles);
     ukStoriesArray.length = 3;
-    console.log(ukStoriesArray);
+    // console.log(ukStoriesArray);
     document.getElementById('uk-target').style.backgroundImage= `url('${ukStoriesArray[0].urlToImage}`
 
     for(let i = 0; i < 1; i++){
@@ -99,12 +99,12 @@ function ukHeadline(response){
         
         `
         document.getElementById('uk-target').appendChild(ukMainStoryTarget);
-        console.log(ukMainStoryTarget);
+        // console.log(ukMainStoryTarget);
     }
     // console.log(response);
   })
   .catch(function (error) {
-    console.log(error);
+    // console.log(error);
   })
   .then(function () {
     // always executed
@@ -123,7 +123,7 @@ function nzHeadline(response){
     const nzData = response.data;
     const nzStoriesArray = Array.from(nzData.articles);
     nzStoriesArray.length = 3;
-    console.log(nzStoriesArray);
+    // console.log(nzStoriesArray);
 
     document.getElementById('nz-target').style.backgroundImage= `url('${nzStoriesArray[0].urlToImage}`
     for(let i = 0; i < 1; i++){
@@ -136,7 +136,7 @@ function nzHeadline(response){
         
         `
         document.getElementById('nz-target').appendChild(nzMainStoryTarget);
-        console.log(nzMainStoryTarget);
+        // console.log(nzMainStoryTarget);
     }
     // console.log(response);
   })
@@ -160,7 +160,7 @@ function ausHeadline(response){
     const ausData = response.data;
     const ausStoriesArray = Array.from(ausData.articles);
     ausStoriesArray.length = 3;
-    console.log(ausStoriesArray);
+    // console.log(ausStoriesArray);
 
     document.getElementById('aus-target').style.backgroundImage= `url('${ausStoriesArray[0].urlToImage}`
     for(let i = 0; i < 1; i++){
@@ -173,7 +173,7 @@ function ausHeadline(response){
         
         `
         document.getElementById('aus-target').appendChild(ausMainStoryTarget);
-        console.log(ausMainStoryTarget);
+        // console.log(ausMainStoryTarget);
     }
     // console.log(response);
   })

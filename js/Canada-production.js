@@ -1,4 +1,5 @@
-const { JSDOM } = ('jsdom');
+const jsdom = require("jsdom");
+
 const { Readability } = ('@mozilla/readability');
 // Canada
 function canadaHeadline(response){
@@ -11,15 +12,16 @@ function canadaHeadline(response){
     const canadaData = response.data;
     const canadaStoriesArray = Array.from(canadaData.articles);
     canadaStoriesArray.length = 3;
-    console.log(canadaStoriesArray);
-    let firstResult = canadaData.articles[1];
+    // console.log(canadaStoriesArray);
+    let firstResult = canadaData.articles[0];
+    console.log(firstResult.content);
 
     // ...and download the HTML for it, again with axios
     axios.get(firstResult.url).then(function(r2) {
   
       // We now have the article HTML, but before we can use Readability to locate the article content we need jsdom to convert it into a DOM object
       let dom = new JSDOM(r2.data, {
-        url: firstResult.url
+        url: firstResult.content
       });
   
       // now pass the DOM document into readability to parse
@@ -87,7 +89,7 @@ function canadaHeadline(response){
     // console.log(response);
   })
   .catch(function (error) {
-    console.log(error);
+    // console.log(error);
   })
   .then(function () {
     // always executed
