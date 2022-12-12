@@ -1,6 +1,6 @@
 
 
-const { Readability } = ('@mozilla/readability');
+
 // Canada
 function canadaHeadline(response){
     axios.get('//newsapi.org/v2/top-headlines?country=ca&apiKey=447b8c1c1861481a95578726345b1cf9', {
@@ -16,15 +16,16 @@ function canadaHeadline(response){
     let firstResult = canadaData.articles[0];
     // console.log(firstResult.content);
     const readingList1 = (firstResult.content);
-    const readingList1Title = (firstResult.title);
-    console.log(readingList1Title)
+    const readingListHtml = String(readingList1);
+    console.log(firstResult);
+    
     // console.log(readingList1)
     
     // Save first article content to Local Storage
     
-    localStorage.setItem('first-article',readingList1);
+    localStorage.setItem('first-article',readingListHtml);
     // localStorage.setItem('first-article-title',readingList1-title);
-    console.log(localStorage);
+    // console.log(localStorage);
 
     // a
 
