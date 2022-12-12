@@ -1,4 +1,4 @@
-const jsdom = require("jsdom");
+
 
 const { Readability } = ('@mozilla/readability');
 // Canada
@@ -14,43 +14,21 @@ function canadaHeadline(response){
     canadaStoriesArray.length = 3;
     // console.log(canadaStoriesArray);
     let firstResult = canadaData.articles[0];
-    console.log(firstResult.content);
+    // console.log(firstResult.content);
+    const readingList1 = (firstResult.content);
+    const readingList1Title = (firstResult.title);
+    console.log(readingList1Title)
+    // console.log(readingList1)
+    
+    // Save first article content to Local Storage
+    
+    localStorage.setItem('first-article',readingList1);
+    // localStorage.setItem('first-article-title',readingList1-title);
+    console.log(localStorage);
 
-    // ...and download the HTML for it, again with axios
-    axios.get(firstResult.url).then(function(r2) {
-  
-      // We now have the article HTML, but before we can use Readability to locate the article content we need jsdom to convert it into a DOM object
-      let dom = new JSDOM(r2.data, {
-        url: firstResult.content
-      });
-  
-      // now pass the DOM document into readability to parse
-      let article = new Readability(dom.window.document).parse();
-  
-      // Done! The article content is in the textContent property
-      console.log(article.textContent);
-    })
-  
-    // New api dl html and convert to json code snippet
+    // a
 
-  
-// and we need jsdom and Readability to parse the article HTML
-
-// First lets get some search data from News API
-
-// Build the URL we are going request. This will get articles related to Apple and sort them newest first
-
-
-// Make the request with axios' get() function
-
-
-  // At this point we will have some search results from the API. Take the first search result...
- 
-
-    // end of new api provided code snippet
-
-
-    // document.querySelector('#canada-target').style.backgroundImage = `url('${canadaStoriesArray[0].urlToImage}')`;
+    // add article image to background div
     document.getElementById('canada-target').style.backgroundImage= `url('${canadaStoriesArray[0].urlToImage}`
     
 
