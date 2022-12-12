@@ -1,67 +1,36 @@
-// const { response } = require("express");
+// we need axios to make HTTP requests
+const axios = require('axios');
 
-// const { response } = require("express");
+// and we need jsdom and Readability to parse the article HTML
+const { JSDOM } = require('jsdom');
+const { Readability } = require('@mozilla/readability');
 
-// const { response } = require("express");
+// First lets get some search data from News API
 
-// const { response } = require("express");
+// Build the URL we are going request. This will get articles related to Apple and sort them newest first
+let url = 'https://newsapi.org/v2/everything?' +
+'q=Apple&' +
+'sortBy=publishedAt&' +
+'apiKey=447b8c1c1861481a95578726345b1cf9';
 
-function fetchData(response){
-    axios.get('//newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=76026a085ca64521989707fb570fb5b9', {
-    params: {
-      ID: 12345
-    }
-    
+// Make the request with axios' get() function
+axios.get(url).then(function(r1) {
+
+  // At this point we will have some search results from the API. Take the first search result...
+  let firstResult = r1.data.articles[0];
+
+  // ...and download the HTML for it, again with axios
+  axios.get(firstResult.url).then(function(r2) {
+
+    // We now have the article HTML, but before we can use Readability to locate the article content we need jsdom to convert it into a DOM object
+    let dom = new JSDOM(r2.data, {
+      url: firstResult.url
+    });
+
+    // now pass the DOM document into readability to parse
+    let readingListArticleOne = new Readability(dom.window.document).parse();
+
+    // Done! The article content is in the textContent property
+    console.log(readingListArticleOne.textContent);
   })
-  .then(function (response) {
-        const product = response.data
-        // console.log(product.articles);
-        const headLines = Array.from(product.articles);
-        console.log(headLines)
-        handleResult();
-        // return headLines;
-        for(let i = 0 ; i < headLines.length; i++) {
-            const headlineDiv = document.createElement('div');
-            headlineDiv.classList.add('headline');
-            headlineDiv.innerHTML = `
-                <div>
-                <h1 class="BBC-headlines">
-                <h2 class="headline">${headLines[i].title}</h2>
-                </h1>
-                </div>
-            
-            `
-            const target = document.getElementById('target');
-            document.getElementById('target').appendChild(headlineDiv);
-        }
-        
-        // console.log(fetchData.responseTEXT);
-        // handleResult(response);
-        // console.log(response);
-     
-     
-  })
-  .catch(function (error) {
-    console.log(error);
-  })
-  .then(function () {
-    
-    // const dataAr = articles; 
-        
-  });  
-
-
-};
-fetchData();
-
-function handleResult (response) {
-    // Array.from(response);
-    // console.log(Array.from(response));
-    
-    
-    const headlineDiv = document.createElement('div');
-    headlineDiv.classList.add('headline');
-    // document.getElementById('target').appendChild('headlineDiv');
-    
-};
-
+})
