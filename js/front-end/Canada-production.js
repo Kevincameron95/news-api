@@ -17,7 +17,7 @@ function canadaHeadline(response){
     // console.log(firstResult.content);
     const readingList1 = (firstResult.content);
     const readingListHtml = String(readingList1);
-    console.log(firstResult);
+    
     
     // console.log(readingList1)
     

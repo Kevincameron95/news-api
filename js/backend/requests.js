@@ -37,9 +37,8 @@ axios.get(url).then(function(r1) {
     const articleOne = readingListArticleOne.textContent;
     
     fs.writeFileSync(('./data.json'), JSON.stringify(articleOne));
-
-
+    
   })
-
+  
   
 })
