@@ -731,3 +731,9 @@ main {
     font-size: 2.7rem;
   }
 }
+
+.reading-list-1 {
+  grid-row: 0/4;
+  width: 100vw;
+  font-size: 12pt;
+}
