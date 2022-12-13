@@ -7,17 +7,25 @@ fetch("../data.json")
    
     const article1data = data;
     console.log(article1data);
-    const Str = require('@supercharge/strings')
-    const title = Str(' Supercharge is sweet!').trim().title().get()
-    console.log(substring);
-    const readingListDiv = document.createElement('div');
-    readingListDiv.classList.add('reading-list-div');
-    readingListDiv.innerHTML=`
-    <div class= "reading-list-article-1">
-    <p class="reading-list-1">hello ${substring}</P>
-    </div>
     
-    `
-    targetID.appendChild(readingListDiv);
-    // console.log(readingListDiv)
+    const lines = article1data.split("\n");  // split the string into lines
+    const numLines = 4;  // number of lines to include in each substring
+
+    for (let i = 0; i < lines.length; i += numLines) {
+    let substring = lines.slice(i, i + numLines).join("\n");
+        console.log(substring)
+        paragraphSplit = substring;
+        
+        const readingListDiv = document.createElement('div');
+        readingListDiv.classList.add('reading-list-div');
+        readingListDiv.innerHTML=`
+        <div class= "reading-list-article-1">
+        <p class="reading-list-1">${paragraphSplit}</P>
+        </div>
+        
+        `
+        targetID.appendChild(readingListDiv);
+        // console.log(readingListDiv)
+    }
+     
 })

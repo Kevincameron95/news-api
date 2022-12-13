@@ -20,7 +20,8 @@ axios.get(url).then(function(r1) {
 
   // At this point we will have some search results from the API. Take the first search result...
   let firstResult = r1.data.articles[0];
-
+  let firstResult = r1.data.articles[0];
+  
   // ...and download the HTML for it, again with axios
   axios.get(firstResult.url).then(function(r2) {
 
