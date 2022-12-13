@@ -23,6 +23,8 @@ axios.get(url).then(function(r1) {
   let secondResult = r1.data.articles[1];
   let thirdResult = r1.data.articles[2];
   
+  const articleList = Array.from(r1.data.articles);
+  console.log(articleList)
   // ...and download the HTML for it, again with axios
   axios.get(firstResult.url).then(function(r2) {
 
@@ -35,7 +37,7 @@ axios.get(url).then(function(r1) {
     let readingListArticleOne = new Readability(dom.window.document).parse();
 
     // Done! The article content is in the textContent property
-    console.log(readingListArticleOne.textContent);
+    // console.log(readingListArticleOne.textContent);
     const articleOne = readingListArticleOne.textContent;
     
     fs.writeFileSync(('./data.json'), JSON.stringify(articleOne));
@@ -52,7 +54,7 @@ axios.get(url).then(function(r1) {
     let readingListArticleTwo = new Readability(dom.window.document).parse();
 
     // Done! The article content is in the textContent property
-    console.log(readingListArticleTwo.textContent);
+    // console.log(readingListArticleTwo.textContent);
     const articleTwo = readingListArticleTwo.textContent;
     
     fs.writeFileSync(('./data2.json'), JSON.stringify(articleTwo));

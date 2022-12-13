@@ -6,14 +6,14 @@ fetch("../data.json")
 .then(function firstArticleResponse(data){
    
     const article1data = data;
-    console.log(article1data);
+    // console.log(article1data);
     
     const lines = article1data.split("\n");  // split the string into lines
     const numLines = 4;  // number of lines to include in each substring
 
     for (let i = 0; i < lines.length; i += numLines) {
     let substring = lines.slice(i, i + numLines).join("\n");
-        console.log(substring)
+        // console.log(substring)
         paragraphSplit = substring;
         
         const readingListDiv = document.createElement('div');
@@ -35,14 +35,14 @@ fetch("../data2.json")
 .then(function firstArticleResponse(data){
    
     const article2data = data;
-    console.log(article2data);
+    // console.log(article2data);
     
     const lines = article2data.split("\n");  // split the string into lines
     const numLines = 4;  // number of lines to include in each substring
 
     for (let i = 0; i < lines.length; i += numLines) {
     let substring = lines.slice(i, i + numLines).join("\n");
-        console.log(substring)
+        // console.log(substring)
         paragraphSplit2 = substring;
         
         const readingListDiv = document.createElement('div');
