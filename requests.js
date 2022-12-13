@@ -20,7 +20,7 @@ axios.get(url).then(function(r1) {
 
   // At this point we will have some search results from the API. Take the first search result...
   let firstResult = r1.data.articles[0];
-  let firstResult = r1.data.articles[0];
+  let secondResult = r1.data.articles[1];
   
   // ...and download the HTML for it, again with axios
   axios.get(firstResult.url).then(function(r2) {
@@ -38,6 +38,23 @@ axios.get(url).then(function(r1) {
     const articleOne = readingListArticleOne.textContent;
     
     fs.writeFileSync(('./data.json'), JSON.stringify(articleOne));
+    
+  })
+  axios.get(secondResult.url).then(function(r2) {
+
+    // We now have the article HTML, but before we can use Readability to locate the article content we need jsdom to convert it into a DOM object
+    let dom = new JSDOM(r2.data, {
+      url: firstResult.url
+    });
+
+    // now pass the DOM document into readability to parse
+    let readingListArticleTwo = new Readability(dom.window.document).parse();
+
+    // Done! The article content is in the textContent property
+    console.log(readingListArticleTwo.textContent);
+    const articleTwo = readingListArticleTwo.textContent;
+    
+    fs.writeFileSync(('./data2.json'), JSON.stringify(articleTwo));
     
   })
   
