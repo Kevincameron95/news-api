@@ -24,42 +24,66 @@ axios.get(url).then(function(r1) {
   let thirdResult = r1.data.articles[2];
   
   const articleList = Array.from(r1.data.articles);
+  articleList.length(4)
   console.log(articleList)
+  
   // ...and download the HTML for it, again with axios
-  axios.get(firstResult.url).then(function(r2) {
+  for(let i = 0; i < articleList.length; +1) {
+    function scrapper(param1, {
+      axios.get(articleList.url[param1]).then(function(r2) {
 
-    // We now have the article HTML, but before we can use Readability to locate the article content we need jsdom to convert it into a DOM object
-    let dom = new JSDOM(r2.data, {
-      url: firstResult.url
+        // We now have the article HTML, but before we can use Readability to locate the article content we need jsdom to convert it into a DOM object
+        let dom = new JSDOM(r2.data, {
+          url: articleList.url[param1]
+        });
+        
+        // now pass the DOM document into readability to parse
+        let readingListArticle[param1] = new Readability(dom.window.document).parse();
+    
+        // Done! The article content is in the textContent property
+        // console.log(readingListArticleOne.textContent);
+        const article[param1] = readingListArticle[param1].textContent;
+        
+        fs.writeFileSync(('./data[param1].json'), JSON.stringify(article[param1]));
+        
+      })
     });
-    
-    // now pass the DOM document into readability to parse
-    let readingListArticleOne = new Readability(dom.window.document).parse();
+    scrapper(1);
+  }
+  // axios.get(firstResult.url).then(function(r2) {
 
-    // Done! The article content is in the textContent property
-    // console.log(readingListArticleOne.textContent);
-    const articleOne = readingListArticleOne.textContent;
+  //   // We now have the article HTML, but before we can use Readability to locate the article content we need jsdom to convert it into a DOM object
+  //   let dom = new JSDOM(r2.data, {
+  //     url: firstResult.url
+  //   });
     
-    fs.writeFileSync(('./data.json'), JSON.stringify(articleOne));
-    
-  })
-  axios.get(secondResult.url).then(function(r2) {
+  //   // now pass the DOM document into readability to parse
+  //   let readingListArticleOne = new Readability(dom.window.document).parse();
 
-    // We now have the article HTML, but before we can use Readability to locate the article content we need jsdom to convert it into a DOM object
-    let dom = new JSDOM(r2.data, {
-      url: firstResult.url
-    });
-
-    // now pass the DOM document into readability to parse
-    let readingListArticleTwo = new Readability(dom.window.document).parse();
-
-    // Done! The article content is in the textContent property
-    // console.log(readingListArticleTwo.textContent);
-    const articleTwo = readingListArticleTwo.textContent;
+  //   // Done! The article content is in the textContent property
+  //   // console.log(readingListArticleOne.textContent);
+  //   const articleOne = readingListArticleOne.textContent;
     
-    fs.writeFileSync(('./data2.json'), JSON.stringify(articleTwo));
+  //   fs.writeFileSync(('./data.json'), JSON.stringify(articleOne));
     
-  })
+  // })
+  // axios.get(secondResult.url).then(function(r2) {
+
+  //   // We now have the article HTML, but before we can use Readability to locate the article content we need jsdom to convert it into a DOM object
+  //   let dom = new JSDOM(r2.data, {
+  //     url: firstResult.url
+  //   });
+
+  //   // now pass the DOM document into readability to parse
+  //   let readingListArticleTwo = new Readability(dom.window.document).parse();
+
+  //   // Done! The article content is in the textContent property
+  //   // console.log(readingListArticleTwo.textContent);
+  //   const articleTwo = readingListArticleTwo.textContent;
+    
+  //   fs.writeFileSync(('./data2.json'), JSON.stringify(articleTwo));
+    
+  // })
   
   
 })
