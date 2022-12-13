@@ -9,9 +9,8 @@ const app = express();
 // First lets get some search data from News API
 
 // Build the URL we are going request. This will get articles related to Apple and sort them newest first
-let url = 'https://newsapi.org/v2/everything?' +
-'q=Apple&' +
-'sortBy=publishedAt&' +
+let url = 'https://newsapi.org/v2/top-headlines?' +
+'country=ca&' +
 'apiKey=447b8c1c1861481a95578726345b1cf9';
 
 
@@ -37,7 +36,8 @@ axios.get(url).then(function(r1) {
     console.log(readingListArticleOne.textContent);
     const articleOne = readingListArticleOne.textContent;
     
-    fs.writeFileSync(('../data.json'), JSON.stringify(articleOne));
+    fs.writeFileSync(('./data.json'), JSON.stringify(articleOne));
+
 
   })
 
