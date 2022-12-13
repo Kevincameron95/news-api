@@ -13,6 +13,8 @@ let url = 'https://newsapi.org/v2/everything?' +
 'sortBy=publishedAt&' +
 'apiKey=447b8c1c1861481a95578726345b1cf9';
 
+
+
 // Make the request with axios' get() function
 axios.get(url).then(function(r1) {
 
@@ -32,5 +34,9 @@ axios.get(url).then(function(r1) {
 
     // Done! The article content is in the textContent property
     console.log(readingListArticleOne.textContent);
+    const articleOne = readingListArticleOne.textContent;
+    JSON.stringify(articleOne);
   })
+
+  
 })
