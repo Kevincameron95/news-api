@@ -21,6 +21,7 @@ axios.get(url).then(function(r1) {
   // At this point we will have some search results from the API. Take the first search result...
   let firstResult = r1.data.articles[0];
   let secondResult = r1.data.articles[1];
+  let thirdResult = r1.data.articles[2];
   
   // ...and download the HTML for it, again with axios
   axios.get(firstResult.url).then(function(r2) {
@@ -29,7 +30,7 @@ axios.get(url).then(function(r1) {
     let dom = new JSDOM(r2.data, {
       url: firstResult.url
     });
-
+    
     // now pass the DOM document into readability to parse
     let readingListArticleOne = new Readability(dom.window.document).parse();
 
