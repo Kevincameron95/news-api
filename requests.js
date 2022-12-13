@@ -1,10 +1,11 @@
 // we need axios to make HTTP requests
 const axios = require('axios');
-
+const fs = require('fs');
 // and we need jsdom and Readability to parse the article HTML
 const { JSDOM } = require('jsdom');
 const { Readability } = require('@mozilla/readability');
-
+const express = require('express');
+const app = express();
 // First lets get some search data from News API
 
 // Build the URL we are going request. This will get articles related to Apple and sort them newest first
@@ -35,7 +36,9 @@ axios.get(url).then(function(r1) {
     // Done! The article content is in the textContent property
     console.log(readingListArticleOne.textContent);
     const articleOne = readingListArticleOne.textContent;
-    JSON.stringify(articleOne);
+    
+    fs.writeFileSync(('../data.json'), JSON.stringify(articleOne));
+
   })
 
   
