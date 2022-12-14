@@ -15,9 +15,7 @@
 
 // font styles
 
-@mixin storyHeadlines {
-    
-}
+
 
 *,
 *::after,
@@ -65,10 +63,8 @@ box-sizing: border-box;
     width: 100%;
     grid-column-start: 1;
     grid-column-end: 5;
-    // background-color: lightcoral;
     background-image: url(/images/wolrd-9-1187862.jpg);
     background-size: cover;
-    
     background-repeat: no-repeat;
     background-blend-mode:darken;
     display: grid;
@@ -127,6 +123,14 @@ main{
 // display: flex;
 
     
+}
+
+// reading list styles
+.reading-list-1{
+    grid-row: 0/4;
+    width: 100vw;
+    font-size: 12pt;
+    columns: 2;
 }
 
 
@@ -220,10 +224,43 @@ main{
 }
 
 
-// reading list styles
-.reading-list-1{
-    grid-row: 0/4;
-    width: 100vw;
-    font-size: 12pt;
-    columns: 2;
+#choose-by-topic-grid{
+    
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 400px 50px 350px 350px 350px 1fr;
+    grid-template-areas:"banner banner banner banner banner"
+                        "dropdn dropdn dropdn dropdn dropdn "
+                        "Topic-story-1 Topic-story-1 Topic-story-1 Topic-story-1 Topic-story-1"
+                        "Topic-story-2 Topic-story-2 Topic-story-2 Topic-story-2 Topic-story-2"
+                        "Topic-story-3 Topic-story-3 Topic-story-3 Topic-story-3 Topic-story-3"
+    ;
+    
+}
+
+.banner-grid{
+    grid-area: banner;
+    // background-color: blue;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20% ;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+}
+
+.topic-article-1-grid{
+    grid-area: Topic-story-1;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20% ;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+}
+.topic-article-2-grid{
+    grid-area: Topic-story-2;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20% ;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+}
+.topic-article-3-grid{
+    grid-area: Topic-story-3;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20% ;
+    grid-template-rows: 20% 20% 20% 20% 20%;
 }

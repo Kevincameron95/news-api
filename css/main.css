@@ -656,6 +656,14 @@ main {
   color: white;
 }
 
+.reading-list-1 {
+  grid-row: 0/4;
+  width: 100vw;
+  font-size: 12pt;
+  -webkit-columns: 2;
+          columns: 2;
+}
+
 @media screen and (max-width: 460px) {
   .headline {
     width: 100%;
@@ -732,10 +740,64 @@ main {
   }
 }
 
-.reading-list-1 {
-  grid-row: 0/4;
-  width: 100vw;
-  font-size: 12pt;
-  -webkit-columns: 2;
-          columns: 2;
+#choose-by-topic-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20% 20% 20% 20% 20%;
+      grid-template-columns: 20% 20% 20% 20% 20%;
+  -ms-grid-rows: 400px 50px 350px 350px 350px 1fr;
+      grid-template-rows: 400px 50px 350px 350px 350px 1fr;
+      grid-template-areas: "banner banner banner banner banner" "dropdn dropdn dropdn dropdn dropdn " "Topic-story-1 Topic-story-1 Topic-story-1 Topic-story-1 Topic-story-1" "Topic-story-2 Topic-story-2 Topic-story-2 Topic-story-2 Topic-story-2" "Topic-story-3 Topic-story-3 Topic-story-3 Topic-story-3 Topic-story-3";
+}
+
+.banner-grid {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  grid-area: banner;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20% 20% 20% 20% 20%;
+      grid-template-columns: 20% 20% 20% 20% 20%;
+  -ms-grid-rows: 20% 20% 20% 20% 20%;
+      grid-template-rows: 20% 20% 20% 20% 20%;
+}
+
+.topic-article-1-grid {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  grid-area: Topic-story-1;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20% 20% 20% 20% 20%;
+      grid-template-columns: 20% 20% 20% 20% 20%;
+  -ms-grid-rows: 20% 20% 20% 20% 20%;
+      grid-template-rows: 20% 20% 20% 20% 20%;
+}
+
+.topic-article-2-grid {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  grid-area: Topic-story-2;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20% 20% 20% 20% 20%;
+      grid-template-columns: 20% 20% 20% 20% 20%;
+  -ms-grid-rows: 20% 20% 20% 20% 20%;
+      grid-template-rows: 20% 20% 20% 20% 20%;
+}
+
+.topic-article-3-grid {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  grid-area: Topic-story-3;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20% 20% 20% 20% 20%;
+      grid-template-columns: 20% 20% 20% 20% 20%;
+  -ms-grid-rows: 20% 20% 20% 20% 20%;
+      grid-template-rows: 20% 20% 20% 20% 20%;
 }
